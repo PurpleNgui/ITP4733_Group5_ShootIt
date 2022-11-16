@@ -135,8 +135,9 @@ GameObject:
   - component: {fileID: 96346143}
   - component: {fileID: 96346142}
   - component: {fileID: 96346141}
+  - component: {fileID: 96346145}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,6 +221,19 @@ Transform:
   m_Father: {fileID: 963194228}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &96346145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96346140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afa86ffdc770554eb3063572d7c7738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 336703060}
 --- !u!1 &336703060
 GameObject:
   m_ObjectHideFlags: 0
@@ -5426,7 +5440,7 @@ GameObject:
   - component: {fileID: 1361744422}
   - component: {fileID: 1361744421}
   - component: {fileID: 1361744420}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Aim
   m_TagString: Untagged
   m_Icon: {fileID: 0}

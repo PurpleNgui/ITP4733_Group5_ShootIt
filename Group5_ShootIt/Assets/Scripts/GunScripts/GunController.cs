@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
-    public GameObject Bullet;
+    public ParticleSystem Bullet;
 
     // Start is called before the first frame update
     void Start()
     {
-        Bullet.SetActive(false);
+        Bullet.Stop(true);
     }
 
     // Update is called once per frame
@@ -17,12 +17,12 @@ public class GunController : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            Bullet.SetActive(true);
+            Bullet.Play(true);
             Debug.Log("Shooting");
         }
         else if(Input.GetButtonUp("Fire1"))
         {
-            Bullet.SetActive(false);
+            Bullet.Stop(true);
             Debug.Log("Stop Shooting");
         }
     }

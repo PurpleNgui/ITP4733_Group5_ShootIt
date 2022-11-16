@@ -31,6 +31,15 @@ public class PlayerController : MonoBehaviour
         {
             player.transform.localRotation = Quaternion.Euler(0, joystickTurn.x, 0);
             transform.localRotation = Quaternion.Euler(-joystickTurn.y, 0, 0);
+
+            if (transform.rotation.x < -45)
+            {
+                transform.rotation = Quaternion.Euler(-45, 0, 0);
+            }
+            if (transform.rotation.x > 30)
+            {
+                transform.rotation = Quaternion.Euler(30, 0, 0);
+            }
         }
         else if (mouseTurn.x != previousMouseTurn.x || mouseTurn.y != previousMouseTurn.y)
         {

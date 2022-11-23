@@ -547,9 +547,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af739bc599678447ac076f8e136c613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building1: {fileID: 4573194470372778826, guid: b7a9e45a4e37b0548817f97b9dd9831a, type: 3}
-  building2: {fileID: 7754953403265748037, guid: ac4a27d6bcde3744b9a4a7131c140533, type: 3}
-  building3: {fileID: 6223222660946525172, guid: 17a0a45c6489a4f4f86e2e4c0e687975, type: 3}
+  buildingNumber: 3
+  building:
+  - {fileID: 4573194470372778826, guid: b7a9e45a4e37b0548817f97b9dd9831a, type: 3}
+  - {fileID: 7754953403265748037, guid: ac4a27d6bcde3744b9a4a7131c140533, type: 3}
+  - {fileID: 6223222660946525172, guid: 17a0a45c6489a4f4f86e2e4c0e687975, type: 3}
   groundTile: {fileID: 2339032008076105774, guid: 50504e2747289eb49a0c76add7fb9321, type: 3}
 --- !u!4 &1388081448
 Transform:
@@ -598,11 +600,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6977467413573719807, guid: ac4a27d6bcde3744b9a4a7131c140533, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6977467413573719807, guid: ac4a27d6bcde3744b9a4a7131c140533, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6977467413573719807, guid: ac4a27d6bcde3744b9a4a7131c140533, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -614,7 +616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6977467413573719807, guid: ac4a27d6bcde3744b9a4a7131c140533, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 7754953403265748037, guid: ac4a27d6bcde3744b9a4a7131c140533, type: 3}
       propertyPath: m_Name
@@ -629,6 +631,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5574797153702730273, guid: 17a0a45c6489a4f4f86e2e4c0e687975, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6223222660946525172, guid: 17a0a45c6489a4f4f86e2e4c0e687975, type: 3}
       propertyPath: m_Name
       value: Buliding3

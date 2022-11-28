@@ -19,8 +19,10 @@ public class DestroyTarget : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-        Destroy(other.gameObject);
-        Debug.Log("A");
+        if(other.gameObject.layer == 6)
+        {
+            Destroy(other.gameObject);
+        }
     }
 
 }

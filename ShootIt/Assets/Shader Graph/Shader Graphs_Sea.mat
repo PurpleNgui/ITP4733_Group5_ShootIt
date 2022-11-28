@@ -37,10 +37,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Normal_Speed: 2.06
-    - Normal_Strength: 5.34
-    - Normal_Tile: 0.78
+    - Metallic: 0
+    - Normal_Speed: 10
+    - Normal_Strength: 2.66
+    - Normal_Tile: 0.11
+    - Wire_Scale: 3.64
+    - Wire_Tile: 1
     m_Colors:
-    - Water_A: {r: 0, g: 0.666101, b: 1, a: 0}
-    - Water_B: {r: 0.18511927, g: 0.2798259, b: 0.6037736, a: 0}
+    - Vector2: {r: 1, g: 1, b: 0, a: 0}
+    - Water_A: {r: 0, g: 0.30436125, b: 0.4528302, a: 0}
+    - Water_B: {r: 0, g: 0.66101694, b: 1, a: 1}
+    - _Emission: {r: 0, g: 0.01646529, b: 0.058314566, a: 1}
   m_BuildTextureStacks: []

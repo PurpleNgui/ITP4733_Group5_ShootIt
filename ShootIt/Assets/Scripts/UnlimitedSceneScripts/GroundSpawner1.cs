@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GroundSpawner1 : MonoBehaviour
 {
 
     public List<GameObject> building;
     public int numberOfbuilding = 2;
+    public int startBuildingSpawn = 1;
+    //public GameObject firstBuilding;
     GameObject buildingBoundary1;
     GameObject buildingBoundary2;
 
@@ -27,12 +30,12 @@ public class GroundSpawner1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        for (int i = 0; i < 3; i++)
+        //nextSpawnPoint = firstBuilding.transform.GetChild(0).transform.position;
+        for (int i = 0; i < startBuildingSpawn; i++)
         {
             SpawnTile();
         }
-
+        
 
         //building = new List<GameObject>(buildingNumber);
     }
@@ -45,26 +48,34 @@ public class GroundSpawner1 : MonoBehaviour
 
     public void SpawnTile()
     {
-
-
-        
-        temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
-
-
-        for (int i = 0; i < numberOfbuilding; i++)                         //Left
+        //if (SceneManager.GetActiveScene().name == "CaveScene")
         {
-            //buildingFacing = leftQuaternion;
-            GameObject rendomObject = RandomObject();
-            Vector3 rendomPos = RandomPosition(i, rendomObject);
-            
+            Vector3 grounSpawnHigh = nextSpawnPoint;
+            grounSpawnHigh.y = -5f;
+            temp = Instantiate(groundTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
+        }
+        //else
+        //    temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
 
-
-            if (!Physics.CheckSphere(rendomPos, spawnCollisionCheckRadius))
+        if(building.Count > 0)
+        {
+            for (int i = 0; i < numberOfbuilding; i++)                    
             {
-                //Debug.Log("spwan left");
-                GameObject tempBuilding =Instantiate(rendomObject, rendomPos, Quaternion.identity/*, temp.transform.GetChild(1)*/);
-         
+                //buildingFacing = leftQuaternion;
+                GameObject rendomObject = RandomObject();
+                Vector3 rendomPos = RandomPosition(i, rendomObject);
+                Quaternion rendomRotation = Quaternion.identity;
+                rendomRotation.y = Random.rotation.y;
+
+
+                if (!Physics.CheckSphere(rendomPos, spawnCollisionCheckRadius))
+                {
+                    //Debug.Log("spwan left");
+                    GameObject tempBuilding = Instantiate(rendomObject, rendomPos, /*Quaternion.identity*/rendomRotation/*, temp.transform.GetChild(1)*/);
+
+                }
             }
+        
          
 
         }
@@ -97,7 +108,7 @@ public class GroundSpawner1 : MonoBehaviour
 
         float randomZ = Random.Range(2.0f, 19f);               //(2.9f, 12.9f)
         //Debug.Log("position: " + new Vector3(randomX, 1f, randomZ));
-        float randomY = Random.Range(-2f, 15f);
+        float randomY = Random.Range(-3f, 1f);
 
 
 
@@ -105,64 +116,6 @@ public class GroundSpawner1 : MonoBehaviour
         //Physics.CheckSphere(transform.position, sphereRadius)
     }
 
-    //Vector3 RandomPosition()
-    //{
-    //    buildingFacing = RightQuaternion;
-    //    float randomX = Random.Range(6.0f, 6.9f);
-    //    if (Random.Range(1, 51) % 2 == 1)                      //50% randomX -> -randomX
-    //    {
-    //        randomX = -randomX;
-    //        BuildingFacing();
-    //    }
-
-    //    float randomZ = Random.Range(2.9f, 12.9f);
-    //    //Debug.Log("position: " + new Vector3(randomX, 1f, randomZ));
-
-
-
-    //    return new Vector3(randomX + temp.transform.position.x, temp.transform.position.y, randomZ + temp.transform.position.z);
-    //    //Physics.CheckSphere(transform.position, sphereRadius)
-    //}
-
-    //Quaternion BuildingFacing()
-    //{
-    //    //Debug.Log("BuildingFacing");
-    //    return buildingFacing = leftQuaternion;
-    //}
-
-    //bool IsPointInLine(GameObject p1, GameObject p2, Vector3 Original, GameObject building)
-    //{
-    //    Debug.Log("building.transform.position: " + building.transform.localPosition);
-    //    Debug.Log("temp.transform.position: " + temp.transform.localPosition);
-
-
-    //    Vector3 pos1 = p1.transform.position + building.transform.localPosition + temp.transform.position;
-    //    Vector3 pos2 = p2.transform.position + building.transform.localPosition + temp.transform.position;
-
-    //    //Vector3 o = Original.transform.position;
-
-    //    Vector3 tempNum = Vector3.zero;
-    //    if (!(pos1.z > pos2.z))
-    //    {
-    //        tempNum = pos2;
-    //        pos2 = pos1;
-    //        pos1 = tempNum;
-    //    }
-
-    //    Debug.Log("pos1.z: " + pos1.z + " pos2.z:" + pos2.z);
-    //    Debug.Log("Original.z: " + Original.z);
-
-
-    //    if (pos1.z> Original.z && pos2.z < Original.z)
-    //    {
-    //        return true;
-    //    }
-    //    else
-    //    {
-    //        return false;
-    //    }  
-    //}
-
-
+    
 
 }

@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class DestroyTarget : MonoBehaviour
 {
+    public GameObject Sparks;
+
+    public ParticleSystem Bullet;
+    public List<ParticleCollisionEvent> collisionEvents;
+
+    GameObject instance;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        collisionEvents = new List<ParticleCollisionEvent>();
     }
 
     // Update is called once per frame
@@ -19,7 +25,27 @@ public class DestroyTarget : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-        if(other.gameObject.layer == 6)
+
+        int numCollisionEvents = Bullet.GetCollisionEvents(other, collisionEvents);
+
+        //Rigidbody rb = other.GetComponent<Rigidbody>();
+        int i = 0;
+
+        while (i < numCollisionEvents)
+        {
+            if (other)
+            {
+                Vector3 pos = collisionEvents[i].intersection;
+                instance = Instantiate(Sparks, pos, other.transform.rotation);
+                Destroy(instance, 0.3f);
+            }
+            i++;
+        }
+
+        //Instantiate(Sparks, other.transform.position, other.transform.rotation);
+        //Destroy(Sparks);
+
+        if (other.gameObject.layer == 6)
         {
             Destroy(other.gameObject);
         }

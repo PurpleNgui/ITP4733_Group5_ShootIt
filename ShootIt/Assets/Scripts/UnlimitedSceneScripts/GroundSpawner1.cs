@@ -9,6 +9,7 @@ public class GroundSpawner1 : MonoBehaviour
     public List<GameObject> building;
     public int numberOfbuilding = 2;
     public int startBuildingSpawn = 1;
+    //public GameObject firstBuilding;
     GameObject buildingBoundary1;
     GameObject buildingBoundary2;
 
@@ -29,12 +30,12 @@ public class GroundSpawner1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //nextSpawnPoint = firstBuilding.transform.GetChild(0).transform.position;
         for (int i = 0; i < startBuildingSpawn; i++)
         {
             SpawnTile();
         }
-
+        
 
         //building = new List<GameObject>(buildingNumber);
     }
@@ -47,16 +48,16 @@ public class GroundSpawner1 : MonoBehaviour
 
     public void SpawnTile()
     {
-        if(SceneManager.GetActiveScene().name == "CaveScene")
+        //if (SceneManager.GetActiveScene().name == "CaveScene")
         {
             Vector3 grounSpawnHigh = nextSpawnPoint;
-            grounSpawnHigh.y = -2f;
+            grounSpawnHigh.y = -5f;
             temp = Instantiate(groundTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
         }
-        else
-        temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
+        //else
+        //    temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
 
-        if(building != null)
+        if(building.Count > 0)
         {
             for (int i = 0; i < numberOfbuilding; i++)                    
             {

@@ -4082,23 +4082,22 @@ ParticleSystem:
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 2
     inside: 1
     outside: 0
-    enter: 0
+    enter: 2
     exit: 0
     colliderQueryMode: 0
     radiusScale: 1
-    primitives:
-    - {fileID: 1361744423}
+    primitives: []
   SubModule:
     serializedVersion: 2
     enabled: 0
     subEmitters:
     - serializedVersion: 3
       emitter: {fileID: 0}
-      type: 0
+      type: 1
       properties: 0
       emitProbability: 1
   LightsModule:
@@ -5056,6 +5055,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d302e51715663647be10d77077676f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sparks: {fileID: 116994134859713489, guid: a9429076f2d29184cb8701cb19e205d4, type: 3}
+  Bullet: {fileID: 336703062}
 --- !u!1 &385306012
 GameObject:
   m_ObjectHideFlags: 0

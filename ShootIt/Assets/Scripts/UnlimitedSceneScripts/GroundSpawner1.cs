@@ -10,22 +10,30 @@ public class GroundSpawner1 : MonoBehaviour
     public int numberOfbuilding = 2;
     public int startBuildingSpawn = 1;
     //public GameObject firstBuilding;
-    GameObject buildingBoundary1;
-    GameObject buildingBoundary2;
+    //GameObject buildingBoundary1;
+    //GameObject buildingBoundary2;
 
     public GameObject groundTile;
+    public GameObject groundEndTile;
+
+    [SerializeField] private float startRandomZ = 2f;
+    [SerializeField] private float endRandomZ = 19f;
 
     GameObject temp;
     Vector3 nextSpawnPoint;
 
     //Vector3 scaleChange = new Vector3(0.5f, 0.5f, 0.5f);
     int buildingNum = 0;
-    Quaternion buildingFacing;
-    Quaternion leftQuaternion = new Quaternion(-0.5f, 0.5f, 0.5f, 0.5f);
-    Quaternion RightQuaternion = new Quaternion(-0.5f, -0.5f, -0.5f, 0.5f);
+    //Quaternion buildingFacing;
+    //Quaternion leftQuaternion = new Quaternion(-0.5f, 0.5f, 0.5f, 0.5f);
+    //Quaternion RightQuaternion = new Quaternion(-0.5f, -0.5f, -0.5f, 0.5f);
 
-    [SerializeField]private float spawnCollisionCheckRadius = 3.5f;
+    [SerializeField] private float spawnCollisionCheckRadius = 3.5f;
     //List<Vector3> points = new List<Vector3>();
+
+    float totalTime = 0f;
+    /*[HideInInspector]*/ public bool isEnd = false;
+    [HideInInspector] public bool isSpawn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +52,15 @@ public class GroundSpawner1 : MonoBehaviour
     void Update()
     {
 
+        if (totalTime <= 150f)
+        {
+            totalTime += Time.deltaTime;
+        }
+        else if(totalTime > 150f && isEnd == false)
+        {
+            isEnd = true;
+        }
+            
     }
 
     public void SpawnTile()
@@ -52,12 +69,23 @@ public class GroundSpawner1 : MonoBehaviour
         {
             Vector3 grounSpawnHigh = nextSpawnPoint;
             grounSpawnHigh.y = -5f;
-            temp = Instantiate(groundTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
+            if (isEnd == false)
+            {
+                temp = Instantiate(groundTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
+            }
+            else if(isEnd == true && !isSpawn)
+            {
+                temp = Instantiate(groundEndTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
+                temp.SetActive(true);
+                isSpawn = true;
+                
+            }
+            
         }
         //else
         //    temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
-
-        if(building.Count > 0)
+        
+        if(building.Count > 0 && !isEnd)
         {
             for (int i = 0; i < numberOfbuilding; i++)                    
             {
@@ -106,7 +134,7 @@ public class GroundSpawner1 : MonoBehaviour
 
 
 
-        float randomZ = Random.Range(2.0f, 19f);               //(2.9f, 12.9f)
+        float randomZ = Random.Range(startRandomZ, endRandomZ);               //(2.9f, 12.9f)
         //Debug.Log("position: " + new Vector3(randomX, 1f, randomZ));
         float randomY = Random.Range(-3f, 1f);
 

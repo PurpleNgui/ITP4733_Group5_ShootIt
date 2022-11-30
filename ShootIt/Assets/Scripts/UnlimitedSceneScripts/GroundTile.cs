@@ -9,6 +9,8 @@ public class GroundTile : MonoBehaviour
 
     [SerializeField] private float speed = 20f;
 
+    //bool isSpawn = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,7 @@ public class GroundTile : MonoBehaviour
         else
             groundSpawner1 = GameObject.FindObjectOfType<GroundSpawner1>();
 
-
+        
     }
 
     // Update is called once per frame
@@ -31,10 +33,35 @@ public class GroundTile : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(groundSpawner)
+
+        if (groundSpawner)
+        {
+            
             groundSpawner.SpawnTile();
+        }
         else
-            groundSpawner1.SpawnTile();
+        {
+            //Debug.Log("this.gameObject.name: " + this.gameObject.name);
+            //Debug.Log("this.gameObject.name != CaveEndRoad: " + this.gameObject.name != "CaveEndRoad");
+            if (!groundSpawner1.isEnd )
+            {
+                //Debug.Log("spawn(!groundSpawner1.isEnd)");
+                //Debug.Log("isSpawn: " + isSpawn);
+                groundSpawner1.SpawnTile();
+
+            }
+            else if(groundSpawner1.isEnd && !groundSpawner1.isSpawn)
+            {
+                //Debug.Log("spawn(groundSpawner1.isEnd)");
+                //Debug.Log("isSpawn: " + isSpawn);
+                //isSpawn = true;
+                groundSpawner1.SpawnTile();
+                
+                //return;
+            }
+
+        }
+           
         Destroy(gameObject, 2f);
     }
 

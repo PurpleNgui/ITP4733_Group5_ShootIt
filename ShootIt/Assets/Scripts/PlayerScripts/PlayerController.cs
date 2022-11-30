@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float rotateSpeed = 1.0f;
 
     Vector2 mouse;
-    //Vector2 stick;
+    Vector2 stick;
     float xRotation;
     float yRotation;
 
@@ -36,16 +36,16 @@ public class PlayerController : MonoBehaviour
         player.transform.localRotation = Quaternion.Euler(0f, yRotation, -0f);
 
         //--for stick--
-        //stick.x = Input.GetAxis("Vertical") * rotateSpeed * Time.deltaTime;
-        //stick.y = Input.GetAxis("Horizontal") * rotateSpeed * Time.deltaTime;
+        stick.x = Input.GetAxis("Vertical") * rotateSpeed * Time.deltaTime;
+        stick.y = Input.GetAxis("Horizontal") * rotateSpeed * Time.deltaTime;
 
-        //xRotation -= stick.x;
-        //xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation += stick.x;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        //yRotation += stick.y;
-        //yRotation = Mathf.Clamp(yRotation, -90f, 90f);
+        yRotation += stick.y;
+        yRotation = Mathf.Clamp(yRotation, -90f, 90f);
 
-        //transform.localRotation = Quaternion.Euler(xRotation, 0f, -0f);
-        //player.transform.localRotation = Quaternion.Euler(0f, yRotation, -0f);
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, -0f);
+        player.transform.localRotation = Quaternion.Euler(0f, yRotation, -0f);
     }
 }

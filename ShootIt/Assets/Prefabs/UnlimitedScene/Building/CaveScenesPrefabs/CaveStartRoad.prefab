@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!64 &4738571905220040740
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318268704586828292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6113912581363944171, guid: c054c7cddb6d925458fadc20ea646586, type: 3}
 --- !u!1 &2200579851163203684
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88263aa6bb14b4444bca06fedb28f912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 20
 --- !u!1001 &2200579850943903573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -140,12 +155,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c054c7cddb6d925458fadc20ea646586, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c054c7cddb6d925458fadc20ea646586, type: 3}
       propertyPath: m_Name
       value: CaveStartPoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c054c7cddb6d925458fadc20ea646586, type: 3}
+--- !u!1 &1318268704586828292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c054c7cddb6d925458fadc20ea646586, type: 3}
+  m_PrefabInstance: {fileID: 2200579850943903573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1801649627449643198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c054c7cddb6d925458fadc20ea646586, type: 3}

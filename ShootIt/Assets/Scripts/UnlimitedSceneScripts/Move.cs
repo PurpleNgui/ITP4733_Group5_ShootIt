@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    public float speed = 3f;
+    public float speed = 30f;
 
     public GroundSpawner1 groundSpawner1;
+    public GroundSpawner groundSpawner;
 
     bool shouldStop = false;
     public float stopTime = 2.3f;
@@ -23,20 +24,38 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (groundSpawner1.isEnd && currentTime <= stopTime)
+        if (groundSpawner1)
         {
-            currentTime += Time.deltaTime;
+            if (groundSpawner1.isEnd && currentTime <= stopTime)
+            {
+                currentTime += Time.deltaTime;
+            }
+            else if (currentTime > stopTime)
+            {
+                shouldStop = true;
+            }
         }
-        else if(currentTime > stopTime)
+        else if (groundSpawner)
         {
-            shouldStop = true;
+            if (groundSpawner1.isEnd && currentTime <= stopTime)
+            {
+                currentTime += Time.deltaTime;
+            }
+            else if (currentTime > stopTime)
+            {
+                shouldStop = true;
+            }
         }
+
+
+      
 
         if (!shouldStop)
         {
             //Debug.Log("move");
-            rb.AddForce(transform.forward * Time.deltaTime * speed);
-            //transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            //rb.AddForce(Vector3.forward * Time.deltaTime * speed);
+            rb.velocity = Vector3.forward * Time.deltaTime * speed;
+            //transform.Translate(Vector3.right * Time.deltaTime * speed);
         }
             
     }

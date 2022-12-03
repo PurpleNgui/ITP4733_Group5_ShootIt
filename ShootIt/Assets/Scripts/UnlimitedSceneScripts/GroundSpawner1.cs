@@ -31,7 +31,9 @@ public class GroundSpawner1 : MonoBehaviour
     [SerializeField] private float spawnCollisionCheckRadius = 3.5f;
     //List<Vector3> points = new List<Vector3>();
 
-    float totalTime = 0f;
+    float totalTime = 150f;
+    float second = 0;
+    float minute = 0;
     /*[HideInInspector]*/ public bool isEnd = false;
     [HideInInspector] public bool isSpawn = false;
 
@@ -52,15 +54,28 @@ public class GroundSpawner1 : MonoBehaviour
     void Update()
     {
 
-        if (totalTime <= 150f)
+        if (totalTime >= 0f)
         {
-            totalTime += Time.deltaTime;
+            totalTime -= Time.deltaTime;
+
+            if(totalTime >= 60)
+            {
+                minute = (int)totalTime / 60;
+                second = totalTime - (minute * 60);
+            }
+            else
+            {
+                minute = 0;
+                second = totalTime;
+            }
         }
-        else if(totalTime > 150f && isEnd == false)
+        else if(totalTime < 0f && isEnd == false)
         {
             isEnd = true;
         }
-            
+
+        
+
     }
 
     public void SpawnTile()
@@ -69,13 +84,16 @@ public class GroundSpawner1 : MonoBehaviour
         {
             Vector3 grounSpawnHigh = nextSpawnPoint;
             grounSpawnHigh.y = -5f;
-            if (isEnd == false)
+            if (!isEnd)
             {
                 temp = Instantiate(groundTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
             }
-            else if(isEnd == true && !isSpawn)
+            else if(isEnd  && !isSpawn)
             {
-                temp = Instantiate(groundEndTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
+                if(groundEndTile)
+                    temp = Instantiate(groundEndTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
+                else
+                    temp = Instantiate(groundTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
                 temp.SetActive(true);
                 isSpawn = true;
                 

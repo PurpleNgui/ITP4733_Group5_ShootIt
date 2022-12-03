@@ -36,8 +36,24 @@ public class GroundTile : MonoBehaviour
 
         if (groundSpawner)
         {
-            
-            groundSpawner.SpawnTile();
+
+            //groundSpawner.SpawnTile();
+            if (!groundSpawner.isEnd)
+            {
+                //Debug.Log("spawn(!groundSpawner1.isEnd)");
+                //Debug.Log("isSpawn: " + isSpawn);
+                groundSpawner.SpawnTile();
+
+            }
+            else if (groundSpawner.isEnd && !groundSpawner.isSpawn)
+            {
+                //Debug.Log("spawn(groundSpawner1.isEnd)");
+                //Debug.Log("isSpawn: " + isSpawn);
+                //isSpawn = true;
+                groundSpawner.SpawnTile();
+
+                //return;
+            }
         }
         else
         {

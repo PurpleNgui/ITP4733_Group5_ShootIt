@@ -10,10 +10,14 @@ public class GroundSpawner : MonoBehaviour
     //public int buildingNumber;
     public List<GameObject> building;
     public int numberOfbuilding = 2;
-    GameObject buildingBoundary1;
-    GameObject buildingBoundary2;
+    //GameObject buildingBoundary1;
+    //GameObject buildingBoundary2;
 
     public GameObject groundTile;
+    public GameObject groundEndTile;
+
+    //[SerializeField] private float startRandomZ = 2f;
+    //[SerializeField] private float endRandomZ = 19f;
 
     GameObject temp;
     Vector3 nextSpawnPoint;
@@ -26,6 +30,12 @@ public class GroundSpawner : MonoBehaviour
 
     [SerializeField]private float spawnCollisionCheckRadius = 3.5f;
     //List<Vector3> points = new List<Vector3>();
+
+    float totalTime = 150f;
+    float second = 0;
+    float minute = 0;
+    public bool isEnd = false;
+    [HideInInspector] public bool isSpawn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +53,25 @@ public class GroundSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (totalTime >= 0f)
+        {
+            totalTime -= Time.deltaTime;
 
+            if (totalTime >= 60)
+            {
+                minute = (int)totalTime / 60;
+                second = totalTime - (minute * 60);
+            }
+            else
+            {
+                minute = 0;
+                second = totalTime;
+            }
+        }
+        else if (totalTime < 0f && isEnd == false)
+        {
+            isEnd = true;
+        }
     }
 
     public void SpawnTile()
@@ -51,70 +79,84 @@ public class GroundSpawner : MonoBehaviour
 
 
         
-        temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
+        //temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
 
-
-        for (int i = 0; i < numberOfbuilding; i++)                         //Left
+        if (!isEnd)
         {
-            buildingFacing = leftQuaternion;
-            GameObject rendomObject = RandomObject();
-            Vector3 rendomPos = RandomPosition(i, rendomObject);
-            rendomPos.x = -rendomPos.x;
-            //Debug.Log("left rendomPos: " + rendomPos);
-
-            //buildingBoundary1 = rendomObject.transform.GetChild(0).gameObject;
-            //buildingBoundary2 = rendomObject.transform.GetChild(1).gameObject;
-
-            //Debug.Log("rendomObject.transform.localScale: " + rendomObject.transform.localScale);
-            //if (buildingNum == 3)
-            //{
-                
-            //    //rendomObject.transform.localScale = rendomObject.transform.localScale /2f; 
-            //    buildingFacing = RightQuaternion;
-
-            //}
-
-            if (!Physics.CheckSphere(rendomPos, spawnCollisionCheckRadius))
-            {
-                //Debug.Log("spwan left");
-                GameObject tempBuilding =Instantiate(rendomObject, rendomPos, buildingFacing, temp.transform.GetChild(1));
-                //if(buildingNum == 3)
-                //{
-                //    //tempBuilding.transform.localScale = rendomObject.transform.localScale / 2f;
-                //}
-            }
-            //GameObject tempBuilding = Instantiate(RandomObject(), rendomPos, buildingFacing, temp.transform.GetChild(1));
+            temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
+        }
+        else if (isEnd && !isSpawn)
+        {
+            temp = Instantiate(groundEndTile, nextSpawnPoint, Quaternion.identity);
+            temp.SetActive(true);
+            isSpawn = true;
 
         }
 
-        for (int i = 0; i < numberOfbuilding; i++)                     //right
+        if (building.Count > 0 && !isEnd)
         {
-            buildingFacing = RightQuaternion;
-            GameObject rendomObject = RandomObject();
-            Vector3 rendomPos = RandomPosition(i, rendomObject);
-            //Debug.Log("right rendomPos: " + rendomPos);
-            
-            //buildingBoundary1 = rendomObject.transform.GetChild(0).gameObject;
-            //buildingBoundary2 = rendomObject.transform.GetChild(1).gameObject;
-
-            //if(buildingNum == 3)
-            //{
-            //    i--;
-            //    //buildingFacing = leftQuaternion;
-            //    continue;
-            //}
-
-
-
-            if (!Physics.CheckSphere(rendomPos, spawnCollisionCheckRadius))
+            for (int i = 0; i < numberOfbuilding; i++)                         //Left
             {
-                //Debug.Log("spwan right");
-                Instantiate(rendomObject, rendomPos, buildingFacing, temp.transform.GetChild(1));
-            }
-            //GameObject tempBuilding = Instantiate(RandomObject(), rendomPos, buildingFacing, temp.transform.GetChild(1));
-            
-        }
+                buildingFacing = leftQuaternion;
+                GameObject rendomObject = RandomObject();
+                Vector3 rendomPos = RandomPosition(i, rendomObject);
+                rendomPos.x = -rendomPos.x;
+                //Debug.Log("left rendomPos: " + rendomPos);
 
+                //buildingBoundary1 = rendomObject.transform.GetChild(0).gameObject;
+                //buildingBoundary2 = rendomObject.transform.GetChild(1).gameObject;
+
+                //Debug.Log("rendomObject.transform.localScale: " + rendomObject.transform.localScale);
+                if (buildingNum == 3)
+                {
+
+                    //rendomObject.transform.localScale = rendomObject.transform.localScale /2f; 
+                    buildingFacing = RightQuaternion;
+
+                }
+
+                if (!Physics.CheckSphere(rendomPos, spawnCollisionCheckRadius))
+                {
+                    //Debug.Log("spwan left");
+                    GameObject tempBuilding = Instantiate(rendomObject, rendomPos, buildingFacing, temp.transform.GetChild(1));
+                    //if(buildingNum == 3)
+                    //{
+                    //    //tempBuilding.transform.localScale = rendomObject.transform.localScale / 2f;
+                    //}
+                }
+                //GameObject tempBuilding = Instantiate(RandomObject(), rendomPos, buildingFacing, temp.transform.GetChild(1));
+
+            }
+
+            for (int i = 0; i < numberOfbuilding; i++)                     //right
+            {
+                buildingFacing = RightQuaternion;
+                GameObject rendomObject = RandomObject();
+                Vector3 rendomPos = RandomPosition(i, rendomObject);
+                //Debug.Log("right rendomPos: " + rendomPos);
+
+                //buildingBoundary1 = rendomObject.transform.GetChild(0).gameObject;
+                //buildingBoundary2 = rendomObject.transform.GetChild(1).gameObject;
+
+                if (buildingNum == 3)
+                {
+                    i--;
+                    //buildingFacing = leftQuaternion;
+                    continue;
+                }
+
+
+
+                if (!Physics.CheckSphere(rendomPos, spawnCollisionCheckRadius))
+                {
+                    //Debug.Log("spwan right");
+                    Instantiate(rendomObject, rendomPos, buildingFacing, temp.transform.GetChild(1));
+                }
+                //GameObject tempBuilding = Instantiate(RandomObject(), rendomPos, buildingFacing, temp.transform.GetChild(1));
+
+            }
+        }
+        
     
         nextSpawnPoint = temp.transform.GetChild(0).transform.position;
     }

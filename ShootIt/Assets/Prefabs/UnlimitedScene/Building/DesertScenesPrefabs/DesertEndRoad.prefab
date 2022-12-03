@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &1306949471
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2989385953847517619}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12545837, y: 0.21772027, z: 0.13292144}
+  m_Center: {x: 0.007890274, y: 0.0030759277, z: -0.0103804}
 --- !u!1 &4442559417608146587
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,6 +22,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4442559417608146596}
+  - component: {fileID: 1306949470}
   m_Layer: 0
   m_Name: DesertEndRoad
   m_TagString: Untagged
@@ -32,6 +46,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1306949470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4442559417608146587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88263aa6bb14b4444bca06fedb28f912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+--- !u!65 &1306949472
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5948714818438660662}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12545836, y: 0.21772021, z: 0.13292153}
+  m_Center: {x: 0.007890295, y: 0.003075919, z: -0.010380476}
 --- !u!1 &7574223234724512747
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,5 +218,15 @@ PrefabInstance:
 --- !u!4 &4192179715994933015 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 34e029a706b68bc45a5d08d29116676c, type: 3}
+  m_PrefabInstance: {fileID: 4442559418625995004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5948714818438660662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8009987137999418058, guid: 34e029a706b68bc45a5d08d29116676c, type: 3}
+  m_PrefabInstance: {fileID: 4442559418625995004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2989385953847517619 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1502877291743220047, guid: 34e029a706b68bc45a5d08d29116676c, type: 3}
   m_PrefabInstance: {fileID: 4442559418625995004}
   m_PrefabAsset: {fileID: 0}

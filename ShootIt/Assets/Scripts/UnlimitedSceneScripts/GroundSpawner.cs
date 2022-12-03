@@ -87,7 +87,10 @@ public class GroundSpawner : MonoBehaviour
         }
         else if (isEnd && !isSpawn)
         {
-            temp = Instantiate(groundEndTile, nextSpawnPoint, Quaternion.identity);
+            if(groundEndTile)
+                temp = Instantiate(groundEndTile, nextSpawnPoint, Quaternion.identity);
+            else
+                temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
             temp.SetActive(true);
             isSpawn = true;
 

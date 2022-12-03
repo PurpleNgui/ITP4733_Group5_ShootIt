@@ -90,7 +90,7 @@ public class GroundSpawner1 : MonoBehaviour
             }
             else if(isEnd  && !isSpawn)
             {
-                if(!groundEndTile)
+                if(groundEndTile)
                     temp = Instantiate(groundEndTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
                 else
                     temp = Instantiate(groundTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);

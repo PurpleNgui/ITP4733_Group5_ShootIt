@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    public float speed = 3f;
+    public float speed = 30f;
 
     public GroundSpawner1 groundSpawner1;
     public GroundSpawner groundSpawner;
@@ -53,8 +53,9 @@ public class Move : MonoBehaviour
         if (!shouldStop)
         {
             //Debug.Log("move");
-            //rb.AddForce(transform.forward * Time.deltaTime * speed);
-            transform.Translate(Vector3.right * Time.deltaTime * speed);
+            //rb.AddForce(Vector3.forward * Time.deltaTime * speed);
+            rb.velocity = Vector3.forward * Time.deltaTime * speed;
+            //transform.Translate(Vector3.right * Time.deltaTime * speed);
         }
             
     }

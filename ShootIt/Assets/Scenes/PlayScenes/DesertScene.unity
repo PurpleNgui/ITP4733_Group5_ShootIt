@@ -562,6 +562,7 @@ GameObject:
   - component: {fileID: 1762803859}
   - component: {fileID: 1762803858}
   - component: {fileID: 1762803857}
+  - component: {fileID: 1762803861}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -641,12 +642,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762803856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: 15.39}
+  m_LocalPosition: {x: 0, y: 1.6, z: 15.39}
   m_LocalScale: {x: 13.290144, y: 3.4139, z: 8.162921}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1762803861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762803856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2614e265d9d59a3469bbffa3baebc884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture: {fileID: 0}
+  stampTexture: {fileID: 0}
+  tempTestRenderTexture: {fileID: 0}
+  rtWidth: 512
+  rtHeight: 512
+  targetTexture: {fileID: 0}
+  auxTexture: {fileID: 0}
+  mat: {fileID: 2100000, guid: 28a97ac2a0b001d4d9a0c876fa978968, type: 2}
+  _prevMousePosition: {x: 0, y: 0, z: 0}
+  _mouseDrag: 0
 --- !u!1 &2033585772
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,6 +34,6 @@ Material:
     m_Ints: []
     m_Floats:
     - Saturation: 1
-    - _Emission: 7.9
+    - _Emission: 7.06
     m_Colors: []
   m_BuildTextureStacks: []

@@ -54,8 +54,8 @@ public class Move : MonoBehaviour
         {
             //Debug.Log("move");
             //rb.AddForce(Vector3.forward * Time.deltaTime * speed);
-            rb.velocity = Vector3.forward * Time.deltaTime * speed;
-            //transform.Translate(Vector3.right * Time.deltaTime * speed);
+            //rb.velocity = Vector3.forward * Time.deltaTime * speed;
+            transform.Translate(Vector3.right * Time.deltaTime * speed);
         }
             
     }

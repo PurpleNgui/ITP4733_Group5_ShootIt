@@ -49,8 +49,8 @@ MonoBehaviour:
     min: -180
     max: 180
   saturation:
-    m_OverrideState: 0
-    m_Value: -23
+    m_OverrideState: 1
+    m_Value: -51
     min: -100
     max: 100
 --- !u!114 &8679605838443147942
@@ -73,7 +73,7 @@ MonoBehaviour:
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 3.67
+    m_Value: 4.48
     min: 0
   scatter:
     m_OverrideState: 1

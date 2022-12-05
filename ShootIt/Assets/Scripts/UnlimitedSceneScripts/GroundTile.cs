@@ -54,7 +54,8 @@ public class GroundTile : MonoBehaviour
                 //Debug.Log("isSpawn: " + isSpawn);
                 //isSpawn = true;
                 groundSpawner.SpawnTile();
-                player.shouldStop = true;
+                if(!groundSpawner1.groundEndTile)
+                    player.shouldStop = true;
 
                 //return;
             }
@@ -76,7 +77,8 @@ public class GroundTile : MonoBehaviour
                 //Debug.Log("isSpawn: " + isSpawn);
                 //isSpawn = true;
                 groundSpawner1.SpawnTile();
-                player.shouldStop = true;
+                if (!groundSpawner1.groundEndTile)
+                    player.shouldStop = true;
 
                 //return;
             }

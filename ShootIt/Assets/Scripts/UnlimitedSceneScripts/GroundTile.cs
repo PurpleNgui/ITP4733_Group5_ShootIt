@@ -76,7 +76,8 @@ public class GroundTile : MonoBehaviour
                 //Debug.Log("isSpawn: " + isSpawn);
                 //isSpawn = true;
                 groundSpawner1.SpawnTile();
-                
+                player.shouldStop = true;
+
                 //return;
             }
 

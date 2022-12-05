@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BuildingDestory : MonoBehaviour
 {
-    float destroyTime = 3.5f;
+    public float destroyTime = 3.5f;
     float randomY;
     [SerializeField] private float speed = 20f;
 

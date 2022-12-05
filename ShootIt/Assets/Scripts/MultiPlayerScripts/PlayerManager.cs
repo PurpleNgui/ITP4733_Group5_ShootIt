@@ -19,7 +19,15 @@ public class PlayerManager : MonoBehaviour
 	{
 		if (PV.IsMine)
 		{
-			CreateController();
+			//CreateController();
+			if (PhotonNetwork.IsMasterClient)
+            {
+				CreateController();
+            }
+            else
+            {
+				controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerController"), new Vector3(2, 0, 0), Quaternion.identity, 0, new object[] { PV.ViewID });
+			}
 		}
 	}
 

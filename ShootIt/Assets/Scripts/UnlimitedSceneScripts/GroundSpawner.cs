@@ -21,6 +21,7 @@ public class GroundSpawner : MonoBehaviour
 
     GameObject temp;
     Vector3 nextSpawnPoint;
+    //Move player;
 
     //Vector3 scaleChange = new Vector3(0.5f, 0.5f, 0.5f);
     int buildingNum = 0;
@@ -46,6 +47,8 @@ public class GroundSpawner : MonoBehaviour
             SpawnTile();
         }
 
+        if (groundEndTile)
+            return;
 
         //building = new List<GameObject>(buildingNumber);
     }
@@ -78,23 +81,25 @@ public class GroundSpawner : MonoBehaviour
     {
 
 
+
+        temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
+
+        //if (!isEnd)
+        //{
+        //    temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
+        //}
+        //else if (isEnd && !isSpawn)
+        //{
+        //    if(groundEndTile)
+        //        temp = Instantiate(groundEndTile, nextSpawnPoint, Quaternion.identity);
+        //    else
+        //        temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
+        //    temp.SetActive(true);
+        //    isSpawn = true;
+
+        //}
+
         
-        //temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
-
-        if (!isEnd)
-        {
-            temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
-        }
-        else if (isEnd && !isSpawn)
-        {
-            if(groundEndTile)
-                temp = Instantiate(groundEndTile, nextSpawnPoint, Quaternion.identity);
-            else
-                temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
-            temp.SetActive(true);
-            isSpawn = true;
-
-        }
 
         if (building.Count > 0 && !isEnd)
         {

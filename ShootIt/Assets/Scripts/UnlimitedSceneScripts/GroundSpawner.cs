@@ -175,7 +175,7 @@ public class GroundSpawner : MonoBehaviour
     Vector3 RandomPosition(int buildingNum, GameObject building)
     {
         //buildingFacing = RightQuaternion;
-        float randomX = Random.Range(9.0f, 9.9f);
+        float randomX = Random.Range(14.0f, 15f);
         //if (Random.Range(1, 51) % 2 == 1)                      //50% randomX -> -randomX
         //{
         //    randomX = -randomX;

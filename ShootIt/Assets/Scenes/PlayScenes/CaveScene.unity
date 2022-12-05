@@ -268,6 +268,7 @@ MonoBehaviour:
   speed: 20
   groundSpawner1: {fileID: 591296577}
   groundSpawner: {fileID: 0}
+  shouldStop: 0
   stopTime: 2.3
 --- !u!136 &331698520
 CapsuleCollider:
@@ -341,7 +342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331698517}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0.0008150787, y: 0, z: 0.007205744}
+  m_LocalPosition: {x: -0.0038, y: 0, z: 0.007205744}
   m_LocalScale: {x: 0.0118126925, y: 0.0118126925, z: 0.0118126925}
   m_Children:
   - {fileID: 1530758121}
@@ -362,6 +363,10 @@ PrefabInstance:
     - target: {fileID: 7743091350696905894, guid: acbae68f92a89e84a8c24674d2b4c686, type: 3}
       propertyPath: m_Name
       value: Cave light
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743091350696905894, guid: acbae68f92a89e84a8c24674d2b4c686, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7743091350696905895, guid: acbae68f92a89e84a8c24674d2b4c686, type: 3}
       propertyPath: m_RootOrder
@@ -450,9 +455,14 @@ MonoBehaviour:
   groundEndTile: {fileID: 2200579850982700727}
   startRandomZ: 20
   endRandomZ: 40
+  startRandomY: -3
+  endRandomY: 1
+  startRandomX: 8
+  endRandomX: 18
   spawnCollisionCheckRadius: 3.5
   isEnd: 0
   isSpawn: 0
+  isDsertScene: 0
 --- !u!4 &591296578
 Transform:
   m_ObjectHideFlags: 0
@@ -731,6 +741,7 @@ MonoBehaviour:
   speed: 20
   groundSpawner1: {fileID: 591296577}
   groundSpawner: {fileID: 0}
+  shouldStop: 0
   stopTime: 2.3
 --- !u!54 &1463976102
 Rigidbody:
@@ -859,7 +870,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -916,6 +927,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2200579850982700725}
   - component: {fileID: 2119354161}
+  - component: {fileID: 2200579850982700729}
+  - component: {fileID: 2200579850982700728}
   m_Layer: 0
   m_Name: CaveEndRoad
   m_TagString: Untagged
@@ -923,6 +936,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!65 &2200579850982700728
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2200579850982700727}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.085007, y: 7.6710405, z: 2.760147}
+  m_Center: {x: -1.5810623, y: 3.3355203, z: 27.216919}
+--- !u!114 &2200579850982700729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2200579850982700727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c01b306372c740bf2a5d3a97e6772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2200579851198516914
 PrefabInstance:
   m_ObjectHideFlags: 0

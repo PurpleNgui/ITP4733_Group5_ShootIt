@@ -19,6 +19,12 @@ public class GroundSpawner1 : MonoBehaviour
     [SerializeField] private float startRandomZ = 2f;
     [SerializeField] private float endRandomZ = 19f;
 
+    public float startRandomY = -3f;
+    public float endRandomY = 1f;
+    
+    public float startRandomX = 8f;
+    public float endRandomX = 18f;
+
     GameObject temp;
     Vector3 nextSpawnPoint;
 
@@ -36,6 +42,8 @@ public class GroundSpawner1 : MonoBehaviour
     float minute = 0;
     /*[HideInInspector]*/ public bool isEnd = false;
     [HideInInspector] public bool isSpawn = false;
+
+    public bool isDsertScene = false;
 
     // Start is called before the first frame update
     void Start()
@@ -58,16 +66,11 @@ public class GroundSpawner1 : MonoBehaviour
         {
             totalTime -= Time.deltaTime;
 
-            if(totalTime >= 60)
-            {
+           
                 minute = (int)totalTime / 60;
-                second = totalTime - (minute * 60);
-            }
-            else
-            {
-                minute = 0;
-                second = totalTime;
-            }
+                second = totalTime %60;
+          
+          
         }
         else if(totalTime < 0f && isEnd == false)
         {
@@ -113,6 +116,11 @@ public class GroundSpawner1 : MonoBehaviour
                 Quaternion rendomRotation = Quaternion.identity;
                 rendomRotation.y = Random.rotation.y;
 
+                if (isDsertScene)
+                {
+                    rendomRotation = Random.rotation;
+                }
+
 
                 if (!Physics.CheckSphere(rendomPos, spawnCollisionCheckRadius))
                 {
@@ -143,7 +151,7 @@ public class GroundSpawner1 : MonoBehaviour
     Vector3 RandomPosition(int buildingNum, GameObject building)
     {
         //buildingFacing = RightQuaternion;
-        float randomX = Random.Range(8f, 18f);
+        float randomX = Random.Range(startRandomX, endRandomX);              //cave:8 to 18
         if (Random.Range(1, 51) % 2 == 1)                      //50% randomX -> -randomX
         {
             randomX = -randomX;
@@ -154,7 +162,7 @@ public class GroundSpawner1 : MonoBehaviour
 
         float randomZ = Random.Range(startRandomZ, endRandomZ);               //(2.9f, 12.9f)
         //Debug.Log("position: " + new Vector3(randomX, 1f, randomZ));
-        float randomY = Random.Range(-3f, 1f);
+        float randomY = Random.Range(startRandomY, endRandomY);          //cave:-3to1
 
 
 

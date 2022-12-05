@@ -18,7 +18,7 @@ public class BuildingDestory : MonoBehaviour
     private void Update()
     {
         
-        if(transform.position.y <= randomY)
+        if(transform.position.y <= randomY && speed!=0)
         {
             transform.Translate(Vector3.up * Time.deltaTime * speed);
         }

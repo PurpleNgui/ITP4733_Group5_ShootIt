@@ -7,6 +7,8 @@ public class GroundTile : MonoBehaviour
     GroundSpawner groundSpawner;
     GroundSpawner1 groundSpawner1;
 
+    Move player;
+
     [SerializeField] private float speed = 20f;
 
     //bool isSpawn = false;
@@ -33,6 +35,7 @@ public class GroundTile : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        player = other.GetComponent<Move>();
 
         if (groundSpawner)
         {
@@ -51,6 +54,7 @@ public class GroundTile : MonoBehaviour
                 //Debug.Log("isSpawn: " + isSpawn);
                 //isSpawn = true;
                 groundSpawner.SpawnTile();
+                player.shouldStop = true;
 
                 //return;
             }

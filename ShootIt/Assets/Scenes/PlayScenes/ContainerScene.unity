@@ -227,6 +227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 19005388}
   - component: {fileID: 19005387}
+  - component: {fileID: 19005389}
   m_Layer: 0
   m_Name: GroundSpawner
   m_TagString: Untagged
@@ -246,13 +247,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a152901ce5ad84429ed1094700e5160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building:
-  - {fileID: 1851456940047941612, guid: 955710b2c454fbd4491e9b2e216b66a5, type: 3}
+  building: []
   numberOfbuilding: 1
   startBuildingSpawn: 3
   groundTile: {fileID: 5837745443270439878, guid: e55598ddba54ba74eba50a4dc260ad8b, type: 3}
   groundEndTile: {fileID: 7393710750858789770, guid: 3efed9bfa7c836e4fb78e45293f3c4f0, type: 3}
-  traget: {fileID: 0}
+  traget: {fileID: 1851456940047941612, guid: 955710b2c454fbd4491e9b2e216b66a5, type: 3}
   uIManager: {fileID: 861291776}
   startRandomZ: 2
   endRandomZ: 10
@@ -261,6 +261,7 @@ MonoBehaviour:
   startRandomX: 0
   endRandomX: 3
   temp: {fileID: 0}
+  randomTraget: {fileID: 0}
   spawnCollisionCheckRadius: 3.5
   isEnd: 0
   isSpawn: 0
@@ -279,6 +280,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &19005389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19005386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 888e1832411f3bd49a7d3e571e280237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfbuilding: 2
+  startRandomZ: 2
+  endRandomZ: 10
+  startRandomY: 2
+  endRandomY: 8
+  startRandomX: 1
+  endRandomX: 5
+  traget: {fileID: 1851456940047941612, guid: 955710b2c454fbd4491e9b2e216b66a5, type: 3}
+  spawnCollisionCheckRadius: 3.5
 --- !u!1 &41156499
 GameObject:
   m_ObjectHideFlags: 0

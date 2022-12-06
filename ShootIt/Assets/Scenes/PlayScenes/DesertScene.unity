@@ -9499,10 +9499,10 @@ MonoBehaviour:
   - {fileID: 3843717345542575259, guid: f8d75d0fbb529f34db949de1c38449f8, type: 3}
   - {fileID: 1638529098567403614, guid: c55c7750cff12e14aab10ea4267a57fe, type: 3}
   numberOfbuilding: 3
-  startBuildingSpawn: 3
+  startBuildingSpawn: 5
   groundTile: {fileID: 3807205583239603729, guid: ae8cce6c8ba21a64c8f16926e37769f0, type: 3}
   groundEndTile: {fileID: 4442559417608146587, guid: f8891048630410040b1ad9fb063f9d59, type: 3}
-  traget: {fileID: 1851456940047941612, guid: 955710b2c454fbd4491e9b2e216b66a5, type: 3}
+  traget: {fileID: 6120857577662545973, guid: d2a39d76cbac8b749bd28e5dc6db33ee, type: 3}
   uIManager: {fileID: 1157389358}
   startRandomZ: 15
   endRandomZ: 25
@@ -9511,6 +9511,7 @@ MonoBehaviour:
   startRandomX: 8
   endRandomX: 20
   temp: {fileID: 0}
+  randomTraget: {fileID: 0}
   spawnCollisionCheckRadius: 3.5
   isEnd: 0
   isSpawn: 0

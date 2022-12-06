@@ -30,7 +30,7 @@ public class GroundSpawner1 : MonoBehaviour
     public GameObject temp;
     Vector3 nextSpawnPoint;
 
-    
+    public RandomTraget randomTraget;
 
     //Vector3 scaleChange = new Vector3(0.5f, 0.5f, 0.5f);
     int buildingNum = 0;
@@ -52,6 +52,9 @@ public class GroundSpawner1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (GameObject.FindObjectOfType<RandomTraget>())
+            randomTraget = GameObject.FindObjectOfType<RandomTraget>();
+
         isEnd = false;
         isSpawn = false;
         //nextSpawnPoint = firstBuilding.transform.GetChild(0).transform.position;
@@ -138,25 +141,19 @@ public class GroundSpawner1 : MonoBehaviour
                 {
                     //Debug.Log("spwan left");
                     GameObject tempBuilding = Instantiate(rendomObject, rendomPos, /*Quaternion.identity*/rendomRotation/*, temp.transform.GetChild(1)*/);
-
-                    if(Random.Range(1, 50)%3 < 2 && traget)
-                    {
-                        //rendomPos
-                        Instantiate(traget, rendomPos, Quaternion.identity);
-                        //randomTraget.SpawnerTarget();
-                    }
-                   
-
                 }
             }
-        
-         
-
+        }
+        if (Random.Range(1, 50) % 3 < 2 && traget)
+        {
+            //rendomPos
+            //Instantiate(traget, rendomPos, Quaternion.identity);
+            randomTraget.SpawnerTarget();
         }
 
-     
 
-    
+
+
         nextSpawnPoint = temp.transform.GetChild(0).transform.position;
     }
 

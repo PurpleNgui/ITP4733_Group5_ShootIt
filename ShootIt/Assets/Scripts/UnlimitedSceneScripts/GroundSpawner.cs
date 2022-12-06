@@ -48,7 +48,7 @@ public class GroundSpawner : MonoBehaviour
         if (GameObject.FindObjectOfType<RandomTraget>())
             randomTraget = GameObject.FindObjectOfType<RandomTraget>();
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 5; i++)
         {
             SpawnTile();
         }
@@ -150,11 +150,11 @@ public class GroundSpawner : MonoBehaviour
                     //    //tempBuilding.transform.localScale = rendomObject.transform.localScale / 2f;
                     //}
                 }
-                if (Random.Range(1, 50) % 5 > 4)
-                {
-                    rendomPos.x += 10;
-                    Instantiate(traget, rendomPos, Quaternion.identity);
-                }
+                //if (Random.Range(1, 50) % 5 > 4)
+                //{
+                //    rendomPos.x += 10;
+                //    Instantiate(traget, rendomPos, Quaternion.identity);
+                //}
                 //GameObject tempBuilding = Instantiate(RandomObject(), rendomPos, buildingFacing, temp.transform.GetChild(1));
 
             }

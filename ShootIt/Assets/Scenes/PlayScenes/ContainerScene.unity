@@ -213,12 +213,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a152901ce5ad84429ed1094700e5160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building: []
+  building:
+  - {fileID: 1851456940047941612, guid: 955710b2c454fbd4491e9b2e216b66a5, type: 3}
   numberOfbuilding: 1
   startBuildingSpawn: 3
   groundTile: {fileID: 5837745443270439878, guid: e55598ddba54ba74eba50a4dc260ad8b, type: 3}
   groundEndTile: {fileID: 7393710750858789770, guid: 3efed9bfa7c836e4fb78e45293f3c4f0, type: 3}
-  traget: {fileID: 1851456940047941612, guid: 955710b2c454fbd4491e9b2e216b66a5, type: 3}
+  traget: {fileID: 0}
   uIManager: {fileID: 861291776}
   startRandomZ: 2
   endRandomZ: 19

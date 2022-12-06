@@ -6213,6 +6213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Motorbike
       objectReference: {fileID: 0}
+    - target: {fileID: 2599902968791481082, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 2066826553}
     - target: {fileID: 2599902968791481083, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: sceneViewId
       value: 1
@@ -6273,6 +6277,10 @@ PrefabInstance:
     - target: {fileID: 1851456940047941612, guid: 955710b2c454fbd4491e9b2e216b66a5, type: 3}
       propertyPath: m_Name
       value: Cave enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851456940047941612, guid: 955710b2c454fbd4491e9b2e216b66a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 955710b2c454fbd4491e9b2e216b66a5, type: 3}
@@ -6633,6 +6641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Forest enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5896296169782166319, guid: fc84d5b7c540411418f8f114af9e83bf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc84d5b7c540411418f8f114af9e83bf, type: 3}
 --- !u!1001 &6354805953589631439
@@ -6645,6 +6657,10 @@ PrefabInstance:
     - target: {fileID: 6120857577662545973, guid: d2a39d76cbac8b749bd28e5dc6db33ee, type: 3}
       propertyPath: m_Name
       value: NCave enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120857577662545973, guid: d2a39d76cbac8b749bd28e5dc6db33ee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6897956780603988623, guid: d2a39d76cbac8b749bd28e5dc6db33ee, type: 3}
       propertyPath: m_RootOrder
@@ -6746,6 +6762,10 @@ PrefabInstance:
     - target: {fileID: 7737452924233742027, guid: 294d541da7bcb4b41af88c14e8940fbb, type: 3}
       propertyPath: m_Name
       value: Glassbridge enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737452924233742027, guid: 294d541da7bcb4b41af88c14e8940fbb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 294d541da7bcb4b41af88c14e8940fbb, type: 3}

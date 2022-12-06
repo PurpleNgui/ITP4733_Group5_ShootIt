@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DestroyTarget : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class DestroyTarget : MonoBehaviour
     public List<ParticleCollisionEvent> collisionEvents;
 
     GameObject instance;
+
+    public Text scoreText;
+    public int score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +44,7 @@ public class DestroyTarget : MonoBehaviour
                 Destroy(instance, 0.3f);
             }
             i++;
+            //score.text = "Score : " + i;
         }
 
         //Instantiate(Sparks, other.transform.position, other.transform.rotation);
@@ -48,7 +53,8 @@ public class DestroyTarget : MonoBehaviour
         if (other.gameObject.layer == 6)
         {
             Destroy(other.gameObject);
+            score++;
+            scoreText.text = "Score : " + score;
         }
     }
-
 }

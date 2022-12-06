@@ -16,6 +16,7 @@ public class GroundSpawner : MonoBehaviour
     public GameObject groundTile;
     public GameObject groundEndTile;
     public UIManager uIManager;
+    public GameObject traget;
 
     //[SerializeField] private float startRandomZ = 2f;
     //[SerializeField] private float endRandomZ = 19f;
@@ -138,6 +139,11 @@ public class GroundSpawner : MonoBehaviour
                 {
                     //Debug.Log("spwan left");
                     GameObject tempBuilding = Instantiate(rendomObject, rendomPos, buildingFacing, temp.transform.GetChild(1));
+
+                    if (Random.Range(1, 50) % 5 > 4)
+                    {
+                        Instantiate(traget, rendomPos, Quaternion.identity);
+                    }
                     //if(buildingNum == 3)
                     //{
                     //    //tempBuilding.transform.localScale = rendomObject.transform.localScale / 2f;

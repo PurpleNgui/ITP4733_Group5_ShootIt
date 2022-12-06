@@ -33,6 +33,8 @@ public class GroundTile : MonoBehaviour
         }
     }
 
+    
+
     private void OnTriggerExit(Collider other)
     {
         player = other.GetComponent<Move>();

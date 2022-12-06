@@ -25,8 +25,8 @@ public class LerpColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //cubeMeshRenderer.material.color = Color.Lerp(cubeMeshRenderer.material.color, myColors[colorIndex], lerpTime*Time.deltaTime);
-        mymat.SetColor("_Emission", myColors[colorIndex]);
+        cubeMeshRenderer.material.color = Color.Lerp(cubeMeshRenderer.material.color, myColors[colorIndex], lerpTime*Time.deltaTime);
+        //mymat.SetColor("_Emission", myColors[colorIndex]);
 
         t = Mathf.Lerp(t, 1f, lerpTime*Time.deltaTime);
         if (t >.9f)

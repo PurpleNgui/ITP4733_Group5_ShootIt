@@ -521,6 +521,10 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3530925447831691692, guid: 344b29e78c596ad47b6e205062ce74a6, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3530925447831692396, guid: 344b29e78c596ad47b6e205062ce74a6, type: 3}
       propertyPath: m_Enabled
       value: 0

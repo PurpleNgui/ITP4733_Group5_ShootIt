@@ -16,10 +16,14 @@ public class ResultUI : MonoBehaviour
     public GroundSpawner groundSpawner;
     public GroundSpawner1 groundSpawner1;
 
+    DestroyTarget destroyTarget;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (GameObject.FindObjectOfType<DestroyTarget>())
+            destroyTarget = GameObject.FindObjectOfType<DestroyTarget>();
+       
     }
 
     // Update is called once per frame
@@ -41,8 +45,10 @@ public class ResultUI : MonoBehaviour
             remainingTimeText.text = string.Format("{0:d2}:{1:d2}", (int)remainingTime / 60, (int)remainingTime % 60);
         }
 
+        score = destroyTarget.GetScore();
         scoreText.text = score.ToString();
 
-        hitRateText.text = hitRate + "%";
+        //float temp = destroyTarget.shooting;
+        //hitRateText.text = hitRate + "%";
     }
 }

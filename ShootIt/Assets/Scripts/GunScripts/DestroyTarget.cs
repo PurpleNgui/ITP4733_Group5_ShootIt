@@ -14,6 +14,7 @@ public class DestroyTarget : MonoBehaviour
 
     public Text scoreText;
     public int score = 0;
+    public int shooting = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,7 @@ public class DestroyTarget : MonoBehaviour
                 Destroy(instance, 0.3f);
             }
             i++;
+            shooting++;
             //score.text = "Score : " + i;
         }
 
@@ -56,5 +58,10 @@ public class DestroyTarget : MonoBehaviour
             score++;
             scoreText.text = "Score : " + score;
         }
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 }

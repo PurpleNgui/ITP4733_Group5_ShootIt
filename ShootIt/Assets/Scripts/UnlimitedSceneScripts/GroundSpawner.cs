@@ -36,7 +36,7 @@ public class GroundSpawner : MonoBehaviour
     [SerializeField]private float spawnCollisionCheckRadius = 3.5f;
     //List<Vector3> points = new List<Vector3>();
 
-    float totalTime = 150f;
+    float totalTime = 15f;
     float second = 0;
     float minute = 0;
     public bool isEnd = false;

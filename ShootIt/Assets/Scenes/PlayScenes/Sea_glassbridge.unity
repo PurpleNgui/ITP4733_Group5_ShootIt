@@ -2889,7 +2889,6 @@ MonoBehaviour:
   startRandomX: 2
   endRandomX: 10
   temp: {fileID: 0}
-  randomTraget: {fileID: 0}
   spawnCollisionCheckRadius: 3.5
   isEnd: 0
   isSpawn: 0
@@ -2996,6 +2995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Motorbike (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2390866464360086488, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1208574056}
     - target: {fileID: 2599902968791481082, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: scoreText
       value: 
@@ -3003,6 +3006,10 @@ PrefabInstance:
     - target: {fileID: 2599902968791481083, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: sceneViewId
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599902968791481751, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}

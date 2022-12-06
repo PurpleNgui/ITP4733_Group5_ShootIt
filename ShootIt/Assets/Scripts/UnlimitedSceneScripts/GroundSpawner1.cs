@@ -23,14 +23,14 @@ public class GroundSpawner1 : MonoBehaviour
 
     public float startRandomY = -3f;
     public float endRandomY = 1f;
-    
+
     public float startRandomX = 8f;
     public float endRandomX = 18f;
 
     public GameObject temp;
     Vector3 nextSpawnPoint;
 
-    
+    public RandomTraget randomTraget;
 
     //Vector3 scaleChange = new Vector3(0.5f, 0.5f, 0.5f);
     int buildingNum = 0;
@@ -44,7 +44,8 @@ public class GroundSpawner1 : MonoBehaviour
     float totalTime = 30f;
     float second = 0;
     float minute = 0;
-    /*[HideInInspector]*/ public bool isEnd = false;
+    /*[HideInInspector]*/
+    public bool isEnd = false;
     [HideInInspector] public bool isSpawn = false;
 
     public bool isDsertScene = false;
@@ -52,6 +53,9 @@ public class GroundSpawner1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (GameObject.FindObjectOfType<RandomTraget>())
+            randomTraget = GameObject.FindObjectOfType<RandomTraget>();
+
         isEnd = false;
         isSpawn = false;
         //nextSpawnPoint = firstBuilding.transform.GetChild(0).transform.position;
@@ -61,7 +65,7 @@ public class GroundSpawner1 : MonoBehaviour
         }
 
 
-       
+
 
 
         //building = new List<GameObject>(buildingNumber);
@@ -75,20 +79,20 @@ public class GroundSpawner1 : MonoBehaviour
         {
             totalTime -= Time.deltaTime;
 
-           
-                minute = (int)totalTime / 60;
-                second = totalTime %60;
-          
-          
+
+            minute = (int)totalTime / 60;
+            second = totalTime % 60;
+
+
         }
-        else if(totalTime < 0f && isEnd == false)
+        else if (totalTime < 0f && isEnd == false)
         {
             isEnd = true;
             //if (isEnd)
-                //uIManager.CallResult();
+            //uIManager.CallResult();
         }
 
-        
+
 
     }
 
@@ -102,25 +106,25 @@ public class GroundSpawner1 : MonoBehaviour
             {
                 temp = Instantiate(groundTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
             }
-            else if(isEnd  && !isSpawn )
+            else if (isEnd && !isSpawn)
             {
-                if(groundEndTile)
+                if (groundEndTile)
                     temp = Instantiate(groundEndTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
                 else
                     temp = Instantiate(groundTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
                 temp.SetActive(true);
                 isSpawn = true;
-                if(!groundEndTile)
+                if (!groundEndTile)
                     uIManager.CallResult();
             }
-            
+
         }
         //else
         //    temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
-        
-        if(building.Count > 0 && !isEnd)
+
+        if (building.Count > 0 && !isEnd)
         {
-            for (int i = 0; i < numberOfbuilding; i++)                    
+            for (int i = 0; i < numberOfbuilding; i++)
             {
                 //buildingFacing = leftQuaternion;
                 GameObject rendomObject = RandomObject();
@@ -139,24 +143,28 @@ public class GroundSpawner1 : MonoBehaviour
                     //Debug.Log("spwan left");
                     GameObject tempBuilding = Instantiate(rendomObject, rendomPos, /*Quaternion.identity*/rendomRotation/*, temp.transform.GetChild(1)*/);
 
-                    if(Random.Range(1, 50)%3 < 2 && traget)
-                    {
-                        //rendomPos
-                        Instantiate(traget, rendomPos, Quaternion.identity);
-                        //randomTraget.SpawnerTarget();
-                    }
-                   
+                    //if(Random.Range(1, 50)%3 < 2 && traget)
+                    //{
+                    //    //rendomPos
+                    //    Instantiate(traget, rendomPos, Quaternion.identity);
+                    //    //randomTraget.SpawnerTarget();
+                    //}
+
 
                 }
             }
-        
-         
 
         }
+        if (Random.Range(1, 50) % 3 < 2 && traget)
+        {
+            //rendomPos
+            //Instantiate(traget, rendomPos, Quaternion.identity);
+            randomTraget.SpawnerTarget();
+        }
 
-     
 
-    
+
+
         nextSpawnPoint = temp.transform.GetChild(0).transform.position;
     }
 
@@ -195,6 +203,6 @@ public class GroundSpawner1 : MonoBehaviour
         //Physics.CheckSphere(transform.position, sphereRadius)
     }
 
-    
+
 
 }

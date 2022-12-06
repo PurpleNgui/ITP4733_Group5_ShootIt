@@ -2008,6 +2008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 591296578}
   - component: {fileID: 591296577}
+  - component: {fileID: 591296579}
   m_Layer: 0
   m_Name: GroundSpawner
   m_TagString: Untagged
@@ -2046,6 +2047,7 @@ MonoBehaviour:
   startRandomX: 8
   endRandomX: 18
   temp: {fileID: 0}
+  randomTraget: {fileID: 0}
   spawnCollisionCheckRadius: 3.5
   isEnd: 0
   isSpawn: 0
@@ -2064,6 +2066,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &591296579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591296576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 888e1832411f3bd49a7d3e571e280237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfbuilding: 5
+  startRandomZ: 20
+  endRandomZ: 40
+  startRandomY: -3
+  endRandomY: 1
+  startRandomX: 8
+  endRandomX: 18
+  traget: {fileID: 1851456940047941612, guid: 955710b2c454fbd4491e9b2e216b66a5, type: 3}
+  spawnCollisionCheckRadius: 3.5
 --- !u!1 &644091152
 GameObject:
   m_ObjectHideFlags: 0

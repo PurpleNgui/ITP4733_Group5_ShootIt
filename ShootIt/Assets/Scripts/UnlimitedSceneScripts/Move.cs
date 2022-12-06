@@ -9,6 +9,8 @@ public class Move : MonoBehaviour
     public GroundSpawner1 groundSpawner1;
     public GroundSpawner groundSpawner;
 
+    public GameObject car;
+
     public bool shouldStop;
     public float stopTime = 2.3f;
     //float currentTime = 0f;
@@ -20,6 +22,11 @@ public class Move : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         shouldStop = false;
+
+        if (GameObject.FindObjectOfType<GroundSpawner>())
+            groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
+        else
+            groundSpawner1 = GameObject.FindObjectOfType<GroundSpawner1>();
     }
 
     // Update is called once per frame
@@ -57,6 +64,7 @@ public class Move : MonoBehaviour
             //rb.AddForce(Vector3.forward * Time.deltaTime * speed);
             //rb.velocity = Vector3.forward * Time.deltaTime * speed;
             transform.Translate(Vector3.right * Time.deltaTime * speed);
+            //transform.Translate(Vector3.forward * Time.deltaTime * speed);
         }
             
     }

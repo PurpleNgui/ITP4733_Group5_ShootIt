@@ -228,7 +228,7 @@ Transform:
   m_GameObject: {fileID: 1861536770897387664}
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 3.5699997, z: -12.569}
-  m_LocalScale: {x: 84.6547, y: 84.6547, z: 84.6547}
+  m_LocalScale: {x: 104.97381, y: 104.97381, z: 104.97381}
   m_Children:
   - {fileID: 5273255084113823728}
   - {fileID: 5871529180776856053}
@@ -316,8 +316,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.097113095, y: 0.020000914, z: 0.039698746}
-  m_Center: {x: -0.00043023363, y: -0.00000065621316, z: -0.008803618}
+  m_Size: {x: 0.097113095, y: 0.020000914, z: 0.015912574}
+  m_Center: {x: -0.00043023258, y: -0.0000006563825, z: -0.020696703}
 --- !u!114 &1519094082703748928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,7 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb340b2c0d7a7e43b1e49d287a6c0f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 30
   groundSpawner1: {fileID: 0}
   groundSpawner: {fileID: 0}
   car: {fileID: 0}
@@ -524,6 +524,18 @@ PrefabInstance:
     - target: {fileID: 3530925447831691692, guid: 344b29e78c596ad47b6e205062ce74a6, type: 3}
       propertyPath: m_RenderPostProcessing
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530925447831692393, guid: 344b29e78c596ad47b6e205062ce74a6, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530925447831692393, guid: 344b29e78c596ad47b6e205062ce74a6, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530925447831692393, guid: 344b29e78c596ad47b6e205062ce74a6, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 3530925447831692396, guid: 344b29e78c596ad47b6e205062ce74a6, type: 3}
       propertyPath: m_Enabled

@@ -18,10 +18,12 @@ public class GroundSpawner : MonoBehaviour
     public UIManager uIManager;
     public GameObject traget;
 
+    public RandomTraget randomTraget;
+
     //[SerializeField] private float startRandomZ = 2f;
     //[SerializeField] private float endRandomZ = 19f;
 
-    GameObject temp;
+    public GameObject temp;
     Vector3 nextSpawnPoint;
     //Move player;
 
@@ -43,6 +45,8 @@ public class GroundSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (GameObject.FindObjectOfType<RandomTraget>())
+            randomTraget = GameObject.FindObjectOfType<RandomTraget>();
 
         for (int i = 0; i < 3; i++)
         {
@@ -140,14 +144,16 @@ public class GroundSpawner : MonoBehaviour
                     //Debug.Log("spwan left");
                     GameObject tempBuilding = Instantiate(rendomObject, rendomPos, buildingFacing, temp.transform.GetChild(1));
 
-                    if (Random.Range(1, 50) % 5 > 4)
-                    {
-                        Instantiate(traget, rendomPos, Quaternion.identity);
-                    }
+                    
                     //if(buildingNum == 3)
                     //{
                     //    //tempBuilding.transform.localScale = rendomObject.transform.localScale / 2f;
                     //}
+                }
+                if (Random.Range(1, 50) % 5 > 4)
+                {
+                    rendomPos.x += 10;
+                    Instantiate(traget, rendomPos, Quaternion.identity);
                 }
                 //GameObject tempBuilding = Instantiate(RandomObject(), rendomPos, buildingFacing, temp.transform.GetChild(1));
 
@@ -179,6 +185,13 @@ public class GroundSpawner : MonoBehaviour
                 }
                 //GameObject tempBuilding = Instantiate(RandomObject(), rendomPos, buildingFacing, temp.transform.GetChild(1));
 
+            }
+
+            if (Random.Range(1, 50) % 3 < 2 && traget)
+            {
+                //rendomPos
+                //Instantiate(traget, rendomPos, Quaternion.identity);
+                randomTraget.SpawnerTarget();
             }
         }
         

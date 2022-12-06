@@ -1047,7 +1047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &325681472
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1259,7 +1259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &361770679
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4849,6 +4849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1388081448}
   - component: {fileID: 1388081447}
+  - component: {fileID: 1388081449}
   m_Layer: 0
   m_Name: GroundSpawner
   m_TagString: Untagged
@@ -4880,6 +4881,8 @@ MonoBehaviour:
   groundEndTile: {fileID: 0}
   uIManager: {fileID: 975782875}
   traget: {fileID: 1851456940047941612, guid: 955710b2c454fbd4491e9b2e216b66a5, type: 3}
+  randomTraget: {fileID: 0}
+  temp: {fileID: 0}
   spawnCollisionCheckRadius: 3
   isEnd: 0
   isSpawn: 0
@@ -4897,6 +4900,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1388081449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388081446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 888e1832411f3bd49a7d3e571e280237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfbuilding: 3
+  startRandomZ: 2
+  endRandomZ: 10
+  startRandomY: 1
+  endRandomY: 10
+  startRandomX: 1
+  endRandomX: 6
+  traget: {fileID: 1851456940047941612, guid: 955710b2c454fbd4491e9b2e216b66a5, type: 3}
+  spawnCollisionCheckRadius: 3.5
 --- !u!1 &1396912315
 GameObject:
   m_ObjectHideFlags: 0
@@ -6063,7 +6087,7 @@ PrefabInstance:
     - target: {fileID: 2599902968791481082, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: scoreText
       value: 
-      objectReference: {fileID: 225764361}
+      objectReference: {fileID: 749653132}
     - target: {fileID: 2599902968791481083, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: sceneViewId
       value: 2
@@ -6245,7 +6269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1907222623
 MonoBehaviour:
   m_ObjectHideFlags: 0

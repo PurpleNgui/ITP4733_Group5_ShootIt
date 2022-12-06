@@ -185,10 +185,14 @@ PrefabInstance:
     - target: {fileID: 2599902968791481082, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: scoreText
       value: 
-      objectReference: {fileID: 322471596}
+      objectReference: {fileID: 942264415}
     - target: {fileID: 2599902968791481083, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: sceneViewId
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599902968791482160, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
@@ -230,11 +234,12 @@ MonoBehaviour:
   traget: {fileID: 0}
   uIManager: {fileID: 861291776}
   startRandomZ: 2
-  endRandomZ: 19
-  startRandomY: -3
-  endRandomY: 1
-  startRandomX: 8
-  endRandomX: 18
+  endRandomZ: 10
+  startRandomY: 0
+  endRandomY: 8
+  startRandomX: 0
+  endRandomX: 3
+  temp: {fileID: 0}
   spawnCollisionCheckRadius: 3.5
   isEnd: 0
   isSpawn: 0
@@ -1588,7 +1593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &444556800
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3392,7 +3397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1119925917
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6013,7 +6018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1868856492
 MonoBehaviour:
   m_ObjectHideFlags: 0

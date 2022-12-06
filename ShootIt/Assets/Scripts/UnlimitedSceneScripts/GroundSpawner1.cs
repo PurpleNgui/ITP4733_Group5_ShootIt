@@ -27,8 +27,10 @@ public class GroundSpawner1 : MonoBehaviour
     public float startRandomX = 8f;
     public float endRandomX = 18f;
 
-    GameObject temp;
+    public GameObject temp;
     Vector3 nextSpawnPoint;
+
+    
 
     //Vector3 scaleChange = new Vector3(0.5f, 0.5f, 0.5f);
     int buildingNum = 0;
@@ -57,7 +59,10 @@ public class GroundSpawner1 : MonoBehaviour
         {
             SpawnTile();
         }
-        
+
+
+       
+
 
         //building = new List<GameObject>(buildingNumber);
     }
@@ -138,6 +143,7 @@ public class GroundSpawner1 : MonoBehaviour
                     {
                         //rendomPos
                         Instantiate(traget, rendomPos, Quaternion.identity);
+                        //randomTraget.SpawnerTarget();
                     }
                    
 

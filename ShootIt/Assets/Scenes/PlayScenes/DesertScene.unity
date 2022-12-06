@@ -518,7 +518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &144891723
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1032,7 +1032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &344266764
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2387,7 +2387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &772254551
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3925,7 +3925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1272695252
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4684,6 +4684,7 @@ MonoBehaviour:
   endRandomY: 3
   startRandomX: 8
   endRandomX: 20
+  temp: {fileID: 0}
   spawnCollisionCheckRadius: 3.5
   isEnd: 0
   isSpawn: 0
@@ -5587,7 +5588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1941064670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6228,6 +6229,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Motorbike (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2599902968791481082, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 38898373}
     - target: {fileID: 2599902968791481083, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: sceneViewId
       value: 2

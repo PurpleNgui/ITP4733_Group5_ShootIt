@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RandomTraget : MonoBehaviour
 {
+    public int numberOfbuilding = 2;
+
     [SerializeField] private float startRandomZ = 2f;
     [SerializeField] private float endRandomZ = 19f;
 
@@ -19,6 +21,8 @@ public class RandomTraget : MonoBehaviour
 
     GroundSpawner groundSpawner;
     GroundSpawner1 groundSpawner1;
+
+    GameObject pos;
 
     [SerializeField] private float spawnCollisionCheckRadius = 3.5f;
 
@@ -38,26 +42,37 @@ public class RandomTraget : MonoBehaviour
             groundSpawner1 = GameObject.FindObjectOfType<GroundSpawner1>();
     }
 
-    //Vector3 RandomPosition(int buildingNum, GameObject building)
-    //{
-    //    //buildingFacing = RightQuaternion;
-    //    float randomX = Random.Range(startRandomX, endRandomX);             
-    //    if (Random.Range(1, 51) % 2 == 1)                      
-    //    {
-    //        randomX = -randomX;
-    //        //BuildingFacing();
-    //    }
+    public void SpawnerTarget()
+    {
+        for (int i = 0; i < numberOfbuilding; i++)
+        {
+            Instantiate(traget, /*nextSpawnPoint*/RandomPosition(), Quaternion.identity);
+        }
+    }
+
+    Vector3 RandomPosition()
+    {
+        //buildingFacing = RightQuaternion;
+        float randomX = Random.Range(startRandomX, endRandomX);
+        if (Random.Range(1, 51) % 2 == 1)
+        {
+            randomX = -randomX;
+            //BuildingFacing();
+        }
 
 
 
-    //    float randomZ = Random.Range(startRandomZ, endRandomZ);               //(2.9f, 12.9f)
-    //    //Debug.Log("position: " + new Vector3(randomX, 1f, randomZ));
-    //    float randomY = Random.Range(startRandomY, endRandomY);          //cave:-3to1
+        float randomZ = Random.Range(startRandomZ, endRandomZ);               //(2.9f, 12.9f)
+        //Debug.Log("position: " + new Vector3(randomX, 1f, randomZ));
+        float randomY = Random.Range(startRandomY, endRandomY);          //cave:-3to1
 
-        
+        if (groundSpawner)
+            pos = groundSpawner.temp;
+        else
+            pos = groundSpawner1.temp;
 
-    //    return new Vector3(randomX + temp.transform.position.x, randomY, randomZ + temp.transform.position.z);
-    //    //Physics.CheckSphere(transform.position, sphereRadius)
-    //}
+        return new Vector3(randomX + pos.transform.position.x, randomY, randomZ + pos.transform.position.z);
+        //Physics.CheckSphere(transform.position, sphereRadius)
+    }
 
 }

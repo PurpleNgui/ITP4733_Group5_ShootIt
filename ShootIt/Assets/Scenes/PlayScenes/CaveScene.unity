@@ -2045,6 +2045,7 @@ MonoBehaviour:
   endRandomY: 1
   startRandomX: 8
   endRandomX: 18
+  temp: {fileID: 0}
   spawnCollisionCheckRadius: 3.5
   isEnd: 0
   isSpawn: 0
@@ -2662,7 +2663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &824852055
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3038,7 +3039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1103911014
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3117,7 +3118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1119779054
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4457,7 +4458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1458945299
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5858,7 +5859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2066826552
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6263,6 +6264,10 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 1519094082703748928, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519094082703748928, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: groundSpawner1
       value: 
       objectReference: {fileID: 591296577}
@@ -6273,7 +6278,7 @@ PrefabInstance:
     - target: {fileID: 2599902968791481082, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: scoreText
       value: 
-      objectReference: {fileID: 2066826553}
+      objectReference: {fileID: 1865978222}
     - target: {fileID: 2599902968791481083, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: sceneViewId
       value: 1

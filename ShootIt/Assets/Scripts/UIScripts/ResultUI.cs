@@ -45,8 +45,8 @@ public class ResultUI : MonoBehaviour
             remainingTimeText.text = string.Format("{0:d2}:{1:d2}", (int)remainingTime / 60, (int)remainingTime % 60);
         }
 
-        score = destroyTarget.GetScore();
-        scoreText.text = score.ToString();
+        //score = destroyTarget.GetScore();
+        //scoreText.text = score.ToString();
 
         //float temp = destroyTarget.shooting;
         //hitRateText.text = hitRate + "%";

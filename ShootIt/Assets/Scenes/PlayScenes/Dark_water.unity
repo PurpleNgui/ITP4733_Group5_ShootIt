@@ -519,7 +519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &111317443
 RectTransform:
   m_ObjectHideFlags: 0
@@ -647,18 +647,6 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 104.97381
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 104.97381
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 104.97381
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -700,7 +688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1519094082703748928, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: speed
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1861536770897387664, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: m_Name
@@ -709,7 +697,7 @@ PrefabInstance:
     - target: {fileID: 2599902968791481082, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: scoreText
       value: 
-      objectReference: {fileID: 521743042}
+      objectReference: {fileID: 367418468}
     - target: {fileID: 2599902968791481083, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: sceneViewId
       value: 2
@@ -1836,7 +1824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &521743041
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2846,17 +2834,18 @@ MonoBehaviour:
   building:
   - {fileID: 1851456940047941612, guid: 955710b2c454fbd4491e9b2e216b66a5, type: 3}
   numberOfbuilding: 10
-  startBuildingSpawn: 5
+  startBuildingSpawn: 2
   groundTile: {fileID: 1918775471970604326, guid: ed891281a58af614cb33afa1b89116ab, type: 3}
   groundEndTile: {fileID: 3159388991394751568, guid: 46ea11a44caa5c5418838d1049aa05b1, type: 3}
   traget: {fileID: 0}
   uIManager: {fileID: 1042618878}
   startRandomZ: 0
   endRandomZ: 5
-  startRandomY: 5
-  endRandomY: 10
+  startRandomY: 30
+  endRandomY: 50
   startRandomX: 2
   endRandomX: 5
+  temp: {fileID: 0}
   spawnCollisionCheckRadius: 3.5
   isEnd: 0
   isSpawn: 0
@@ -3324,7 +3313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1037805094
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3946,7 +3935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1258553187
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5988,7 +5977,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2059103105
 MonoBehaviour:
   m_ObjectHideFlags: 0

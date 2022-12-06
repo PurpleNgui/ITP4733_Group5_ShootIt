@@ -11,7 +11,12 @@ public class BuildingDestory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        randomY = Random.Range(-2f, 15f);
+        if(speed != 0)
+        {
+            Debug.Log("saf");
+            randomY = Random.Range(-2f, 15f);
+        }
+           
         Destroy(this.gameObject, destroyTime);
     }
 

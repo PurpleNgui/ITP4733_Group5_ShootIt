@@ -927,7 +927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &324150070
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2521,6 +2521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 782378318}
   - component: {fileID: 782378317}
+  - component: {fileID: 782378319}
   m_Layer: 0
   m_Name: GroundSpawner
   m_TagString: Untagged
@@ -2554,6 +2555,8 @@ MonoBehaviour:
   endRandomY: 1
   startRandomX: 2
   endRandomX: 10
+  temp: {fileID: 0}
+  randomTraget: {fileID: 0}
   spawnCollisionCheckRadius: 3.5
   isEnd: 0
   isSpawn: 0
@@ -2572,6 +2575,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &782378319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782378316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 888e1832411f3bd49a7d3e571e280237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfbuilding: 3
+  startRandomZ: 2
+  endRandomZ: 10
+  startRandomY: 3
+  endRandomY: 10
+  startRandomX: 1
+  endRandomX: 6
+  traget: {fileID: 5896296169782166319, guid: fc84d5b7c540411418f8f114af9e83bf, type: 3}
+  spawnCollisionCheckRadius: 3.5
 --- !u!1001 &787646624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3301,10 +3325,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 1519094082703748931, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 1861536770897387664, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: m_Name
       value: Motorbike (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2599902968791481082, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1445408133}
     - target: {fileID: 2599902968791481083, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: sceneViewId
       value: 2
@@ -3328,7 +3360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &980202794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4242,7 +4274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1217871887
 MonoBehaviour:
   m_ObjectHideFlags: 0

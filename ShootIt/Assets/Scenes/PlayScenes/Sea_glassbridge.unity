@@ -1403,7 +1403,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &439496748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2139,7 +2139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &698278903
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2854,6 +2854,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1017669829}
   - component: {fileID: 1017669828}
+  - component: {fileID: 1017669830}
   m_Layer: 0
   m_Name: GroundSpawner
   m_TagString: Untagged
@@ -2887,6 +2888,8 @@ MonoBehaviour:
   endRandomY: 1
   startRandomX: 2
   endRandomX: 10
+  temp: {fileID: 0}
+  randomTraget: {fileID: 0}
   spawnCollisionCheckRadius: 3.5
   isEnd: 0
   isSpawn: 0
@@ -2905,6 +2908,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1017669830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017669827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 888e1832411f3bd49a7d3e571e280237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfbuilding: 2
+  startRandomZ: 2
+  endRandomZ: 19
+  startRandomY: -3
+  endRandomY: 8
+  startRandomX: 8
+  endRandomX: 18
+  traget: {fileID: 7737452924233742027, guid: 294d541da7bcb4b41af88c14e8940fbb, type: 3}
+  spawnCollisionCheckRadius: 3.5
 --- !u!1001 &1020022729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2972,6 +2996,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Motorbike (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2599902968791481082, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1208574056}
     - target: {fileID: 2599902968791481083, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: sceneViewId
       value: 2
@@ -3273,7 +3301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1164208970
 RectTransform:
   m_ObjectHideFlags: 0

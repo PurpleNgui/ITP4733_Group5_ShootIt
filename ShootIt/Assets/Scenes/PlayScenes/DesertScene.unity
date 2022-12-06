@@ -4648,6 +4648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1612661833}
   - component: {fileID: 1612661832}
+  - component: {fileID: 1612661834}
   m_Layer: 0
   m_Name: GroundSpawner
   m_TagString: Untagged
@@ -4685,6 +4686,7 @@ MonoBehaviour:
   startRandomX: 8
   endRandomX: 20
   temp: {fileID: 0}
+  randomTraget: {fileID: 0}
   spawnCollisionCheckRadius: 3.5
   isEnd: 0
   isSpawn: 0
@@ -4703,6 +4705,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1612661834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612661831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 888e1832411f3bd49a7d3e571e280237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfbuilding: 3
+  startRandomZ: 2
+  endRandomZ: 10
+  startRandomY: 8
+  endRandomY: 12
+  startRandomX: 1
+  endRandomX: 8
+  traget: {fileID: 6120857577662545973, guid: d2a39d76cbac8b749bd28e5dc6db33ee, type: 3}
+  spawnCollisionCheckRadius: 3.5
 --- !u!1 &1705904017
 GameObject:
   m_ObjectHideFlags: 0
@@ -6224,6 +6247,14 @@ PrefabInstance:
     - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519094082703748931, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519094082703748931, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1861536770897387664, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: m_Name

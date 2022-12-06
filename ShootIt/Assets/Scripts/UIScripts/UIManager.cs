@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject osd;
     [SerializeField] GameObject pauseUI;
     [SerializeField] GameObject settingUI;
+    [SerializeField] GameObject startUI;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !pauseUI.activeInHierarchy && !settingUI.activeInHierarchy)     //PauseUI & SettingUI haven't opened
+        if (Input.GetKeyDown(KeyCode.Escape) && !pauseUI.activeInHierarchy && !settingUI.activeInHierarchy && !startUI.activeInHierarchy)     //PauseUI & SettingUI haven't opened
         {
             OpenUI(pauseUI);
         }
@@ -31,7 +32,7 @@ public class UIManager : MonoBehaviour
         }
 
         //When Pause / Setting
-        if (pauseUI.activeInHierarchy || settingUI.activeInHierarchy)
+        if (pauseUI.activeInHierarchy || settingUI.activeInHierarchy || startUI.activeInHierarchy)
         {
             Time.timeScale = 0;     //pause the game time
             Cursor.lockState = CursorLockMode.Confined;

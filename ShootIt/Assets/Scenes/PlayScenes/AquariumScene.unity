@@ -175,6 +175,8 @@ MonoBehaviour:
   speed: 20
   groundSpawner1: {fileID: 0}
   groundSpawner: {fileID: 0}
+  car: {fileID: 0}
+  shouldStop: 0
   stopTime: 2.3
 --- !u!136 &297825639
 CapsuleCollider:
@@ -406,11 +408,18 @@ MonoBehaviour:
   startBuildingSpawn: 2
   groundTile: {fileID: 6659185632845263557, guid: 786c124fc0c08f346a4a069c6defc1cd, type: 3}
   groundEndTile: {fileID: 0}
+  traget: {fileID: 0}
+  uIManager: {fileID: 0}
   startRandomZ: 2
   endRandomZ: 19
+  startRandomY: -3
+  endRandomY: 1
+  startRandomX: 8
+  endRandomX: 18
   spawnCollisionCheckRadius: 3.5
   isEnd: 0
   isSpawn: 0
+  isDsertScene: 0
 --- !u!4 &392654017
 Transform:
   m_ObjectHideFlags: 0
@@ -425,6 +434,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &399702755
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 386126953865730064, guid: 53816f53f3c835842ae56fe5aae725d2, type: 3}
+      propertyPath: m_Name
+      value: BGM
+      objectReference: {fileID: 0}
+    - target: {fileID: 386126953865730070, guid: 53816f53f3c835842ae56fe5aae725d2, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 386126953865730070, guid: 53816f53f3c835842ae56fe5aae725d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 386126953865730070, guid: 53816f53f3c835842ae56fe5aae725d2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 386126953865730070, guid: 53816f53f3c835842ae56fe5aae725d2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 386126953865730070, guid: 53816f53f3c835842ae56fe5aae725d2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 386126953865730070, guid: 53816f53f3c835842ae56fe5aae725d2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 386126953865730070, guid: 53816f53f3c835842ae56fe5aae725d2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 386126953865730070, guid: 53816f53f3c835842ae56fe5aae725d2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 386126953865730070, guid: 53816f53f3c835842ae56fe5aae725d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 386126953865730070, guid: 53816f53f3c835842ae56fe5aae725d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 386126953865730070, guid: 53816f53f3c835842ae56fe5aae725d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 53816f53f3c835842ae56fe5aae725d2, type: 3}
 --- !u!1 &517242268
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,6 +651,8 @@ MonoBehaviour:
   speed: 20
   groundSpawner1: {fileID: 0}
   groundSpawner: {fileID: 0}
+  car: {fileID: 0}
+  shouldStop: 0
   stopTime: 2.3
 --- !u!136 &645130840
 CapsuleCollider:
@@ -861,6 +929,8 @@ MonoBehaviour:
   speed: 20
   groundSpawner1: {fileID: 392654016}
   groundSpawner: {fileID: 0}
+  car: {fileID: 0}
+  shouldStop: 0
   stopTime: 2.3
 --- !u!65 &1306235058
 BoxCollider:

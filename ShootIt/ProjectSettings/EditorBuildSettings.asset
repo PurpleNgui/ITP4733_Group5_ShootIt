@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MultiPlayerScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/SampleSceneA.unity
-    guid: c8fe466ba6720d04d93af8a654ac7c25
-  - enabled: 1
     path: Assets/Scenes/PlayScenes/CaveScene.unity
     guid: 63df7e9ee04787f45b4f9f7f28697a5e
   - enabled: 1

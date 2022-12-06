@@ -9,7 +9,7 @@ public class Move : MonoBehaviour
     public GroundSpawner1 groundSpawner1;
     public GroundSpawner groundSpawner;
 
-    public bool shouldStop = false;
+    public bool shouldStop;
     public float stopTime = 2.3f;
     //float currentTime = 0f;
 
@@ -19,6 +19,7 @@ public class Move : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        shouldStop = false;
     }
 
     // Update is called once per frame

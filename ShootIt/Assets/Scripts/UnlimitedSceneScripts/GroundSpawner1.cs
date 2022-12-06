@@ -15,6 +15,7 @@ public class GroundSpawner1 : MonoBehaviour
 
     public GameObject groundTile;
     public GameObject groundEndTile;
+    public UIManager uIManager;
 
     [SerializeField] private float startRandomZ = 2f;
     [SerializeField] private float endRandomZ = 19f;
@@ -48,6 +49,8 @@ public class GroundSpawner1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isEnd = false;
+        isSpawn = false;
         //nextSpawnPoint = firstBuilding.transform.GetChild(0).transform.position;
         for (int i = 0; i < startBuildingSpawn; i++)
         {
@@ -75,6 +78,8 @@ public class GroundSpawner1 : MonoBehaviour
         else if(totalTime < 0f && isEnd == false)
         {
             isEnd = true;
+            //if (isEnd)
+                //uIManager.CallResult();
         }
 
         
@@ -99,7 +104,7 @@ public class GroundSpawner1 : MonoBehaviour
                     temp = Instantiate(groundTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
                 temp.SetActive(true);
                 isSpawn = true;
-                
+                uIManager.CallResult();
             }
             
         }
@@ -138,6 +143,11 @@ public class GroundSpawner1 : MonoBehaviour
 
     
         nextSpawnPoint = temp.transform.GetChild(0).transform.position;
+    }
+
+    public float GetCurrentTime()
+    {
+        return totalTime;
     }
 
     GameObject RandomObject()

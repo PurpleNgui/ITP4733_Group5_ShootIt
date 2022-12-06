@@ -11,18 +11,22 @@ public class LerpColor : MonoBehaviour
     float t = 0f;
     int len;
 
+    Material mymat ;
+
 
     // Start is called before the first frame update
     void Start()
     {
         cubeMeshRenderer = GetComponent<MeshRenderer>();
         len = myColors.Length;
+        mymat = GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame
     void Update()
     {
-        cubeMeshRenderer.material.color = Color.Lerp(cubeMeshRenderer.material.color, myColors[colorIndex], lerpTime*Time.deltaTime);
+        //cubeMeshRenderer.material.color = Color.Lerp(cubeMeshRenderer.material.color, myColors[colorIndex], lerpTime*Time.deltaTime);
+        mymat.SetColor("_Emission", myColors[colorIndex]);
 
         t = Mathf.Lerp(t, 1f, lerpTime*Time.deltaTime);
         if (t >.9f)

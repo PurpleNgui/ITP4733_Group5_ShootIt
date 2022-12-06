@@ -18,30 +18,34 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !pauseUI.activeInHierarchy && !settingUI.activeInHierarchy && !startUI.activeInHierarchy)     //PauseUI & SettingUI haven't opened
+        if (startUI)
         {
-            OpenUI(pauseUI);
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && pauseUI.activeInHierarchy) //PauseUI have opened
-        {
-            CloseUI(pauseUI);
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && settingUI.activeInHierarchy) //SettingUI have opened
-        {
-            CloseUI(settingUI);
-        }
+            if (Input.GetKeyDown(KeyCode.Escape) && !pauseUI.activeInHierarchy && !settingUI.activeInHierarchy && !startUI.activeInHierarchy)     //PauseUI & SettingUI haven't opened
+            {
+                OpenUI(pauseUI);
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape) && pauseUI.activeInHierarchy) //PauseUI have opened
+            {
+                CloseUI(pauseUI);
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape) && settingUI.activeInHierarchy) //SettingUI have opened
+            {
+                CloseUI(settingUI);
+            }
 
-        //When Pause / Setting
-        if (pauseUI.activeInHierarchy || settingUI.activeInHierarchy || startUI.activeInHierarchy)
-        {
-            Time.timeScale = 0;     //pause the game time
-            Cursor.lockState = CursorLockMode.Confined;
+            //When Pause / Setting
+            if (pauseUI.activeInHierarchy || settingUI.activeInHierarchy || startUI.activeInHierarchy)
+            {
+                Time.timeScale = 0;     //pause the game time
+                Cursor.lockState = CursorLockMode.Confined;
+            }
+            else
+            {
+                Time.timeScale = 1;     //start the game time
+                Cursor.lockState = CursorLockMode.Locked;
+            }
         }
-        else
-        {
-            Time.timeScale = 1;     //start the game time
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+        
     }
 
     public void OpenUI(GameObject nextUI)

@@ -1395,6 +1395,9 @@ MonoBehaviour:
   pauseUI: {fileID: 3035129}
   settingUI: {fileID: 1869553125}
   startUI: {fileID: 0}
+  resultUI: {fileID: 0}
+  againSceneName: 
+  nextSceneName: 
 --- !u!1 &985490462
 GameObject:
   m_ObjectHideFlags: 0
@@ -3551,10 +3554,6 @@ PrefabInstance:
     - target: {fileID: 3530925447831691682, guid: 344b29e78c596ad47b6e205062ce74a6, type: 3}
       propertyPath: sceneViewId
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3530925447831691683, guid: 344b29e78c596ad47b6e205062ce74a6, type: 3}
-      propertyPath: score
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3530925447831691683, guid: 344b29e78c596ad47b6e205062ce74a6, type: 3}
       propertyPath: scoreText

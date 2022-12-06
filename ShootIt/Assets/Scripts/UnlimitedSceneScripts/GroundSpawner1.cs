@@ -134,7 +134,7 @@ public class GroundSpawner1 : MonoBehaviour
                     //Debug.Log("spwan left");
                     GameObject tempBuilding = Instantiate(rendomObject, rendomPos, /*Quaternion.identity*/rendomRotation/*, temp.transform.GetChild(1)*/);
 
-                    if(Random.Range(1, 50)%3 < 2)
+                    if(Random.Range(1, 50)%3 < 2 && traget)
                     {
                         //rendomPos
                         Instantiate(traget, rendomPos, Quaternion.identity);

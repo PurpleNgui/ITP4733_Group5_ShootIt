@@ -19,7 +19,7 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButton("Fire1") && Time.time > nextFire)
+        if(Input.GetButton("Fire1") || Input.GetAxis("Fire1") > 0 && Time.time > nextFire)
         {
             //if (!Bullet.isPlaying)
             //{

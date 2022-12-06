@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
         stick.x = Input.GetAxis("Vertical") * rotateSpeed * Time.deltaTime;
         stick.y = Input.GetAxis("Horizontal") * rotateSpeed * Time.deltaTime;
 
-        xRotation += stick.x;
+        xRotation -= stick.x;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         yRotation += stick.y;

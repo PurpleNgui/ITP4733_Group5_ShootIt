@@ -15,6 +15,7 @@ public class GroundSpawner : MonoBehaviour
 
     public GameObject groundTile;
     public GameObject groundEndTile;
+    public UIManager uIManager;
 
     //[SerializeField] private float startRandomZ = 2f;
     //[SerializeField] private float endRandomZ = 19f;
@@ -74,7 +75,15 @@ public class GroundSpawner : MonoBehaviour
         else if (totalTime < 0f && isEnd == false)
         {
             isEnd = true;
+            //if(isEnd)
+            //    uIManager.CallResult();
         }
+    }
+
+   
+    public float GetCurrentTime()
+    {
+        return totalTime;
     }
 
     public void SpawnTile()
@@ -83,6 +92,8 @@ public class GroundSpawner : MonoBehaviour
 
 
         temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
+        if (isEnd)
+            uIManager.CallResult();
 
         //if (!isEnd)
         //{
@@ -99,7 +110,7 @@ public class GroundSpawner : MonoBehaviour
 
         //}
 
-        
+
 
         if (building.Count > 0 && !isEnd)
         {

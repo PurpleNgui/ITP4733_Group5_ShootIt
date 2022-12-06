@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class UIManager : MonoBehaviour
 
     GroundSpawner groundSpawner;
     GroundSpawner1 groundSpawner1;
+
+    public GameObject startFirstButton, pauseFirstButton, optionFirstButton;
 
     public string againSceneName;
     public string nextSceneName;
@@ -26,6 +29,8 @@ public class UIManager : MonoBehaviour
             groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
         else
             groundSpawner1 = GameObject.FindObjectOfType<GroundSpawner1>();
+
+        EventSystem.current.SetSelectedGameObject(startFirstButton);
     }
 
     // Update is called once per frame
@@ -55,6 +60,26 @@ public class UIManager : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.Escape) && settingUI.activeInHierarchy) //SettingUI have opened
             {
                 CloseUI(settingUI);
+            }
+
+            if (Input.GetButtonDown("Menu") && !pauseUI.activeInHierarchy && !settingUI.activeInHierarchy && !startUI.activeInHierarchy)     //PauseUI & SettingUI haven't opened
+            {
+                OpenUI(pauseUI);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+            }
+            else if (Input.GetButtonDown("Menu") && pauseUI.activeInHierarchy) //PauseUI have opened
+            {
+                CloseUI(pauseUI);
+            }
+            else if (Input.GetButtonDown("Menu") && settingUI.activeInHierarchy) //SettingUI have opened
+            {
+                CloseUI(settingUI);
+            }
+            else if (settingUI.activeInHierarchy)
+            {
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(optionFirstButton);
             }
 
             //When Pause / Setting

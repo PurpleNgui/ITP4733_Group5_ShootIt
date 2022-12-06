@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Motorbike (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2365599766079655472, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 1434065381}
     - target: {fileID: 2599902968791481077, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: m_RenderPostProcessing
       value: 1

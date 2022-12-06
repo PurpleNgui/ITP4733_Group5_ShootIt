@@ -11104,6 +11104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Motorbike
       objectReference: {fileID: 0}
+    - target: {fileID: 2365599766079655472, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 1732713149}
     - target: {fileID: 2599902968791481082, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: scoreText
       value: 
@@ -11120,7 +11124,8 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1865978222}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2599902968791481084, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
 --- !u!4 &1519094084058673126 stripped
 Transform:

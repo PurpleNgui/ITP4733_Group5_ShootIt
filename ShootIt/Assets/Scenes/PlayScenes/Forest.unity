@@ -8161,6 +8161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Motorbike (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2365599766079655472, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 362968559}
     - target: {fileID: 2599902968791481082, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: scoreText
       value: 

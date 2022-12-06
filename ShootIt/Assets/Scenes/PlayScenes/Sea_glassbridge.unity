@@ -2995,6 +2995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Motorbike (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2365599766079655472, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 1020022730}
     - target: {fileID: 2390866464360086488, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
       propertyPath: scoreText
       value: 
@@ -3013,6 +3017,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+--- !u!198 &1020022730 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7274354676483676918, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+  m_PrefabInstance: {fileID: 1020022729}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1029590304
 GameObject:
   m_ObjectHideFlags: 0

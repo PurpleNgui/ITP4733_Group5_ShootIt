@@ -96,7 +96,7 @@ public class GroundSpawner1 : MonoBehaviour
             {
                 temp = Instantiate(groundTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
             }
-            else if(isEnd  && !isSpawn)
+            else if(isEnd  && !isSpawn )
             {
                 if(groundEndTile)
                     temp = Instantiate(groundEndTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
@@ -104,7 +104,8 @@ public class GroundSpawner1 : MonoBehaviour
                     temp = Instantiate(groundTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
                 temp.SetActive(true);
                 isSpawn = true;
-                uIManager.CallResult();
+                if(!groundEndTile)
+                    uIManager.CallResult();
             }
             
         }

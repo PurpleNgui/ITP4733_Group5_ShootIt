@@ -2883,7 +2883,7 @@ MonoBehaviour:
   startBuildingSpawn: 5
   groundTile: {fileID: 1918775471970604326, guid: ed891281a58af614cb33afa1b89116ab, type: 3}
   groundEndTile: {fileID: 3159388991394751568, guid: 46ea11a44caa5c5418838d1049aa05b1, type: 3}
-  uIManager: {fileID: 0}
+  uIManager: {fileID: 1042618878}
   startRandomZ: 0
   endRandomZ: 35
   startRandomY: -3
@@ -4779,6 +4779,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1042618878}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

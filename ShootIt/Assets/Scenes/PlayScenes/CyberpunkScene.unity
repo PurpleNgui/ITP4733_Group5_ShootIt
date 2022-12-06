@@ -4731,7 +4731,7 @@ MonoBehaviour:
   numberOfbuilding: 2
   groundTile: {fileID: 2339032008076105774, guid: 50504e2747289eb49a0c76add7fb9321, type: 3}
   groundEndTile: {fileID: 0}
-  uIManager: {fileID: 0}
+  uIManager: {fileID: 975782875}
   spawnCollisionCheckRadius: 3
   isEnd: 0
   isSpawn: 0
@@ -6595,6 +6595,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 975782875}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

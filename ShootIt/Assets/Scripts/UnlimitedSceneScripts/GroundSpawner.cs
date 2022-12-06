@@ -92,7 +92,7 @@ public class GroundSpawner : MonoBehaviour
 
 
         temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
-        if (isEnd)
+        if (isEnd && !groundEndTile)
             uIManager.CallResult();
 
         //if (!isEnd)

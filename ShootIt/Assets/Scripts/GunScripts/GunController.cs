@@ -10,10 +10,12 @@ public class GunController : MonoBehaviour
 
     private float nextFire = 0f;
 
+    private AudioSource shot;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        shot = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,12 +32,14 @@ public class GunController : MonoBehaviour
             //}
             nextFire = Time.time + fireRate;
             Bullet.Emit(1);
+            shot.Play();
         }
 
         if (fire != 0 && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             Bullet.Emit(1);
+            shot.Play();
         }
     }
 }

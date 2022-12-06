@@ -33,6 +33,8 @@ public class GroundTile : MonoBehaviour
         }
     }
 
+    
+
     private void OnTriggerExit(Collider other)
     {
         player = other.GetComponent<Move>();
@@ -54,7 +56,7 @@ public class GroundTile : MonoBehaviour
                 //Debug.Log("isSpawn: " + isSpawn);
                 //isSpawn = true;
                 groundSpawner.SpawnTile();
-                if(!groundSpawner1.groundEndTile)
+                if(!groundSpawner.groundEndTile)
                     player.shouldStop = true;
 
                 //return;

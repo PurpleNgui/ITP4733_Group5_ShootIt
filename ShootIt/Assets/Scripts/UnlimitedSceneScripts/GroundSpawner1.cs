@@ -15,6 +15,7 @@ public class GroundSpawner1 : MonoBehaviour
 
     public GameObject groundTile;
     public GameObject groundEndTile;
+    public GameObject traget;
     public UIManager uIManager;
 
     [SerializeField] private float startRandomZ = 2f;
@@ -96,7 +97,7 @@ public class GroundSpawner1 : MonoBehaviour
             {
                 temp = Instantiate(groundTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
             }
-            else if(isEnd  && !isSpawn)
+            else if(isEnd  && !isSpawn )
             {
                 if(groundEndTile)
                     temp = Instantiate(groundEndTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
@@ -104,7 +105,8 @@ public class GroundSpawner1 : MonoBehaviour
                     temp = Instantiate(groundTile, /*nextSpawnPoint*/grounSpawnHigh, Quaternion.identity);
                 temp.SetActive(true);
                 isSpawn = true;
-                uIManager.CallResult();
+                if(!groundEndTile)
+                    uIManager.CallResult();
             }
             
         }
@@ -131,6 +133,13 @@ public class GroundSpawner1 : MonoBehaviour
                 {
                     //Debug.Log("spwan left");
                     GameObject tempBuilding = Instantiate(rendomObject, rendomPos, /*Quaternion.identity*/rendomRotation/*, temp.transform.GetChild(1)*/);
+
+                    if(Random.Range(1, 50)%3 < 2)
+                    {
+                        //rendomPos
+                        Instantiate(traget, rendomPos, Quaternion.identity);
+                    }
+                   
 
                 }
             }

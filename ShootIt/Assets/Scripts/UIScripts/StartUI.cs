@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class StartUI : MonoBehaviour
 {
     public string scenename;
+    //public string thisSceneName;
 
     // Start is called before the first frame update
     void Start()
@@ -32,5 +33,6 @@ public class StartUI : MonoBehaviour
     public void SinglePlayer()
     {
         transform.gameObject.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -40,6 +40,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7393710750858789769}
   - component: {fileID: 53525316669765079}
+  - component: {fileID: 8899816238835009242}
+  - component: {fileID: 1175466186282390855}
   m_Layer: 0
   m_Name: ContainerEndRoad
   m_TagString: Untagged
@@ -76,6 +78,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+--- !u!65 &8899816238835009242
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7393710750858789770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.69, y: 5.013978, z: 1.2911072}
+  m_Center: {x: 0, y: 2.0069885, z: 23.540459}
+--- !u!114 &1175466186282390855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7393710750858789770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c01b306372c740bf2a5d3a97e6772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uIManager: {fileID: 0}
 --- !u!1001 &7393710751878731762
 PrefabInstance:
   m_ObjectHideFlags: 0

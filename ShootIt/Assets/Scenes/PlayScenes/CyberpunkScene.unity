@@ -2022,6 +2022,7 @@ MonoBehaviour:
   speed: 20
   groundSpawner1: {fileID: 0}
   groundSpawner: {fileID: 0}
+  car: {fileID: 0}
   shouldStop: 0
   stopTime: 2.3
 --- !u!136 &617345498
@@ -3417,6 +3418,9 @@ MonoBehaviour:
   settingUI: {fileID: 1553857455}
   startUI: {fileID: 82760027}
   resultUI: {fileID: 678618302}
+  startFirstButton: {fileID: 0}
+  pauseFirstButton: {fileID: 0}
+  optionFirstButton: {fileID: 0}
   againSceneName: CyberpunkScene
   nextSceneName: Dark_water
 --- !u!1 &986070128
@@ -4069,6 +4073,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d46f5296a8dd5164aaa82c5fe3979e53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5148817236446094103, guid: d46f5296a8dd5164aaa82c5fe3979e53, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -4604,6 +4612,7 @@ MonoBehaviour:
   speed: 20
   groundSpawner1: {fileID: 0}
   groundSpawner: {fileID: 0}
+  car: {fileID: 0}
   shouldStop: 0
   stopTime: 2.3
 --- !u!65 &1331322163
@@ -5939,6 +5948,67 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1878469451
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.5699997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341599315228555818, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1861536770897387664, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: m_Name
+      value: Motorbike (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599902968791481083, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 51df180483c33eb4e9d484aa0a1aaa8e, type: 3}
 --- !u!1 &1882008138
 GameObject:
   m_ObjectHideFlags: 0

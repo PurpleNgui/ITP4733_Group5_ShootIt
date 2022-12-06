@@ -55,7 +55,7 @@ public class DestroyTarget : MonoBehaviour
         if (other.gameObject.layer == 6)
         {
             Destroy(other.gameObject);
-            score++;
+            score+=100;
             scoreText.text = /*"Score : " +*/ score.ToString();
         }
     }
